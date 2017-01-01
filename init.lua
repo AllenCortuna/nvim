@@ -3,8 +3,8 @@
 
 vim.cmd([[
 source $HOME/.config/nvim/coc.vim
-source $HOME/.config/nvim/keybind.vim
 source $HOME/.config/nvim/fnc.vim
+source $HOME/.config/nvim/map.lua
 source $HOME/.config/nvim/barbar.lua
 source $HOME/.config/nvim/setting.lua
 source $HOME/.config/nvim/theme.lua

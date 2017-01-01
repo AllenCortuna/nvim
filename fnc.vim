@@ -34,4 +34,4 @@ augroup packer_user_config
   autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 augroup end
 
-autocmd Filetype vim,javascript,css,html,python,jsx |autocmd InsertLeave * :write 
+" autocmd Filetype vim,javascript,css,html,python,jsx |autocmd InsertLeave * :write 
