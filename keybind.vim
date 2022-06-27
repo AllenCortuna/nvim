@@ -56,3 +56,8 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 " NvimTreeResize
 " NvimTreeCollapse
 " NvimTreeCollapseKeepBuffers
+nnoremap <leader>p :PackerSync <cr>
+nnoremap <leader>pc :PackerClean <cr>
+nnoremap <space>p :packer
+
+nnoremap S ['UltiSnipsEdit! <cr>
