@@ -1,7 +1,7 @@
       require("neo-tree").setup({
         close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
         popup_border_style = "solid",
-        enable_git_status = true,
+        enable_git_status = false,
         enable_diagnostics = false,
         sort_case_insensitive = false, -- used when sorting files and directories in the tree
         sort_function = nil , -- use a custom function for sorting files and directories in the tree 
@@ -66,7 +66,7 @@
         },
         window = {
           position = "float",
-          width = 4,
+          width = 50,
           mapping_options = {
             noremap = true,
             nowait = true,
@@ -119,7 +119,7 @@
             hide_gitignored = true,
             hide_hidden = true, -- only works on Windows for hidden files/directories
             hide_by_name = {
-              "node_modules"
+              "node_modules", "git"
             },
             hide_by_pattern = { -- uses glob style patterns
               --"*.meta"
