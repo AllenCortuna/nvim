@@ -45,17 +45,7 @@ nnoremap zz :noh <cr>
 nnoremap <F1> :%s//
 
 
-nnoremap <F5> :NvimTreeToggle <cr>
-nnoremap <leader>R :NvimTreeRefresh<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
-" More available functions:
-" NvimTreeOpen
-" NvimTreeClose
-" NvimTreeFocus
-" NvimTreeFindFileToggle
-" NvimTreeResize
-" NvimTreeCollapse
-" NvimTreeCollapseKeepBuffers
+nnoremap <F5> :Neotree toggle<cr>
 nnoremap <leader>p :PackerSync <cr>
 nnoremap <leader>pc :PackerClean <cr>
 nnoremap <space>p :packer
