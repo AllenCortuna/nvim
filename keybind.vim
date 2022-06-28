@@ -7,6 +7,7 @@ let maplocalleader= "a"
 nnoremap sn :set nonumber ! <cr>
 nnoremap sw :set nowrap! <cr>
 nnoremap sr :source $MYVIMRC<cr>
+nnoremap so :on <cr>
 
 "Press \\ to jump back to the last cursor position.
 nnoremap <leader>/ ``

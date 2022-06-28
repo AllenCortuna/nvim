@@ -75,8 +75,9 @@ _G.packer_plugins = {
     url = "https://github.com/jiangmiao/auto-pairs"
   },
   ["ayu-vim"] = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/ayu-vim",
+    loaded = false,
+    needs_bufread = false,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/ayu-vim",
     url = "https://github.com/ayu-theme/ayu-vim"
   },
   ["barbar.nvim"] = {
@@ -90,8 +91,9 @@ _G.packer_plugins = {
     url = "https://github.com/neoclide/coc.nvim"
   },
   edge = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/edge",
+    loaded = false,
+    needs_bufread = false,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/edge",
     url = "https://github.com/sainnhe/edge"
   },
   fzf = {
@@ -128,8 +130,9 @@ _G.packer_plugins = {
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
   ["oceanic-next-vim"] = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/oceanic-next-vim",
+    loaded = false,
+    needs_bufread = false,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/oceanic-next-vim",
     url = "https://github.com/adrian5/oceanic-next-vim"
   },
   ["packer.nvim"] = {
@@ -143,8 +146,9 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   sonokai = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/sonokai",
+    loaded = false,
+    needs_bufread = false,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/sonokai",
     url = "https://github.com/sainnhe/sonokai"
   },
   ["tokyonight-vim"] = {
@@ -206,13 +210,15 @@ _G.packer_plugins = {
     url = "https://github.com/mxw/vim-jsx"
   },
   ["vim-material"] = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/vim-material",
+    loaded = false,
+    needs_bufread = false,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-material",
     url = "https://github.com/hzchirs/vim-material"
   },
   ["vim-material-theme"] = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/vim-material-theme",
+    loaded = false,
+    needs_bufread = false,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-material-theme",
     url = "https://github.com/jdkanani/vim-material-theme"
   },
   ["vim-move"] = {
@@ -245,18 +251,12 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-javascript', 'typescript-vim', 'vim-tsx', 'vim-jsx'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'vim-css3-syntax'}, { ft = "css" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-tsx', 'vim-jsx', 'vim-javascript', 'typescript-vim'}, { ft = "typescript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-tsx', 'vim-jsx', 'vim-javascript', 'typescript-vim'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-javascript', 'typescript-vim', 'vim-tsx', 'vim-jsx'}, { ft = "typescript" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], true)
-vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]]
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], false)
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], true)
-vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]]
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], false)
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]], true)
 vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]]
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]], false)
@@ -266,6 +266,12 @@ time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/shar
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/typescript-vim/ftdetect/typescript.vim]], true)
 vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/typescript-vim/ftdetect/typescript.vim]]
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/typescript-vim/ftdetect/typescript.vim]], false)
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], true)
+vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]]
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], false)
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], true)
+vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]]
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

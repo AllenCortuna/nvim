@@ -23,7 +23,6 @@ if version >= 703
     set undofile
     set undoreload=10000
 endif
-autocmd InsertLeave * :write 
 
 "jsx and tsx
 au BufNewFile,BufRead *.ts setlocal filetype=typescript
@@ -34,3 +33,5 @@ augroup packer_user_config
   autocmd!
   autocmd BufWritePost plugins.lua source <afile> | PackerCompile
 augroup end
+
+autocmd Filetype vim,javascript,css,html,python,jsx |autocmd InsertLeave * :write 

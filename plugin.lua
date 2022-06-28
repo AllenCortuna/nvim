@@ -6,13 +6,13 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   --colorscheme
-  use { 'adrian5/oceanic-next-vim', n='ColorSchemePre'}
-  use { 'sainnhe/sonokai',n='ColorSchemePre'}
-  use { 'sainnhe/edge',n='ColorSchemePre'}
-  use { 'ghifarit53/tokyonight-vim',n='ColorSchemePre'}
-  use { 'jdkanani/vim-material-theme',n='ColorSchemePre'}
-  use { 'ayu-theme/ayu-vim',n='ColorSchemePre'}
-  use { 'hzchirs/vim-material',n='ColorSchemePre'}
+  use { 'adrian5/oceanic-next-vim',opt=true }
+  use { 'sainnhe/sonokai',opt=true }
+  use { 'sainnhe/edge',opt=true }
+  use { 'ghifarit53/tokyonight-vim'}
+  use { 'jdkanani/vim-material-theme',opt=true }
+  use { 'ayu-theme/ayu-vim',opt=true }
+  use { 'hzchirs/vim-material',opt=true }
  
   use { 'romgrk/barbar.nvim', n='BufReadPost'}
   use { 'leafgarland/typescript-vim',ft={'typescript','javascript'}}
