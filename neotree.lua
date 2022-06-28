@@ -14,7 +14,7 @@
         --   end , -- this sorts files and directories descendantly
         default_component_configs = {
           container = {
-            enable_character_fade = true
+            enable_character_fade = false
           },
           indent = {
             indent_size = 2,
@@ -45,7 +45,7 @@
           },
           name = {
             trailing_slash = false,
-            use_git_status_colors = true,
+            use_git_status_colors = false,
             highlight = "NeoTreeFileName",
           },
           git_status = {
@@ -66,7 +66,7 @@
         },
         window = {
           position = "float",
-          width = 80,
+          width = 4,
           mapping_options = {
             noremap = true,
             nowait = true,
@@ -119,7 +119,7 @@
             hide_gitignored = true,
             hide_hidden = true, -- only works on Windows for hidden files/directories
             hide_by_name = {
-              --"node_modules"
+              "node_modules"
             },
             hide_by_pattern = { -- uses glob style patterns
               --"*.meta"
@@ -181,4 +181,4 @@
         }
       })
 
-      vim.cmd([[nnoremap \ :Neotree reveal<cr>]])
+-- vim.cmd([[nnoremap \ :Neotree reveal<cr>]])

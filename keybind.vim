@@ -3,7 +3,7 @@
 
 let mapleader = "_"
 let maplocalleader= "a" 
-nnoremap $ :e $MYVIMRC<cr>
+" nnoremap $ :e $MYVIMRC<cr>
 nnoremap sn :set nonumber ! <cr>
 nnoremap sw :set nowrap! <cr>
 nnoremap sr :source $MYVIMRC<cr>
@@ -46,6 +46,7 @@ nnoremap <F1> :%s//
 
 
 nnoremap <F5> :Neotree toggle<cr>
+nnoremap $ :Neotree /data/data/com.termux/files/home/.config/nvim <cr>
 nnoremap <leader>p :PackerSync <cr>
 nnoremap <leader>pc :PackerClean <cr>
 nnoremap <space>p :packer

@@ -32,7 +32,6 @@ vim.g['tokyonight_enable_italic'] = 0
 --colorscheme vim-material
 --colorscheme ayu
 -- colorscheme oceanicnext  
-
 vim.cmd([[
-colorscheme vim-material
+colorscheme oceanicnext
 ]])

@@ -48,7 +48,7 @@ set.history = 1000
 set.wildmenu = true
 
 
-set.splitright = true
+set.splitright = false
 
 --Wildmenu will ignore files with these extensions.
 set.wildignore = '*/.docx/*, */.jpg/*, */.png/*,*/.gif/*, */.pdf/*, */.pyc/*, */.exe/*, */.flv/*, */.img/*,*/.xlsx/*'
