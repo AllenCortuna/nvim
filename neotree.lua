@@ -1,6 +1,6 @@
       require("neo-tree").setup({
         close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
-        popup_border_style = "single",
+        popup_border_style = "solid",
         enable_git_status = false,
         enable_diagnostics = false,
         sort_case_insensitive = false, -- used when sorting files and directories in the tree
@@ -17,8 +17,8 @@
             enable_character_fade = false
           },
           indent = {
-            indent_size = 2,
-            padding = 1, -- extra padding on left hand side
+            indent_size = 0.5,
+            padding = 0.5, -- extra padding on left hand side
             -- indent guides
             with_markers = true,
             indent_marker = "│",
@@ -66,7 +66,7 @@
         },
         window = {
           position = "float",
-          width = 50,
+          width = 100,
           mapping_options = {
             noremap = true,
             nowait = true,

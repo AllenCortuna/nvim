@@ -8,7 +8,6 @@ return require('packer').startup(function()
   --colorscheme
   use { 'adrian5/oceanic-next-vim',opt=true }
   use { 'sainnhe/sonokai',opt=true }
-  use { 'sainnhe/edge',opt=true }
   use { 'ghifarit53/tokyonight-vim'}
   use { 'jdkanani/vim-material-theme',opt=true }
   use { 'ayu-theme/ayu-vim',opt=true }
@@ -22,15 +21,15 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   use {'hail2u/vim-css3-syntax', ft={'css'}}
-  use {'lukas-reineke/indent-blankline.nvim'}
+  use {'lukas-reineke/indent-blankline.nvim',opt=true,n='VimEnter'}
   use {'kyazdani42/nvim-web-devicons' }
   use { 'vim-airline/vim-airline-themes'}
-  use { 'vim-airline/vim-airline'  }
-  use { 'tpope/vim-commentary'}
-  use { 'honza/vim-snippets',n='VimEnter' }
-  use {'SirVer/ultisnips' ,n='VimEnter' }
-  use { 'jiangmiao/auto-pairs'}
-  use { 'ryanoasis/vim-devicons' }
+  use { 'vim-airline/vim-airline' }
+  use { 'tpope/vim-commentary',opt=true}
+  use { 'honza/vim-snippets',opt=true,n='VimEnter' }
+  use {'SirVer/ultisnips',opt=true ,n='VimEnter' }
+  use { 'jiangmiao/auto-pairs',opt=true,n='VimEnter'}
+  use { 'ryanoasis/vim-devicons',opt=true }
   use { 'junegunn/fzf',cmd={'FZF'}}
   use {'matze/vim-move' }
   use { 'neoclide/coc.nvim', branch = 'release' }
@@ -41,7 +40,7 @@ use {
     branch = "v2.x",
     requires = { 
       "nvim-lua/plenary.nvim",
-      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "kyazdani42/nvim-web-devicons", 
       "MunifTanjim/nui.nvim",
     }
   }

@@ -15,10 +15,7 @@ vim.ayucolor='dark' --for dark version of theme
 vim.g['material_style']= 'oceanic'
 --vim.g:material_style='dark'
 
---EDGE
-vim.g['edge_style'] = 'neon'  
---Available values:   'default', 'aura', 'neon'  
-vim.g['edge_better_performance'] = 1
+ 
 vim.g['airline_theme'] = 'tokyonight'
 
 
