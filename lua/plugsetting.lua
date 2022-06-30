@@ -17,11 +17,11 @@ vim.g['UltiSnipsJumpForwardTrigger'] = '<tab>'
 -- vim.g['UltiSnipsJumpForwardTrigger'] = '<c-b>'
 
 ----IDENTGUIDE
---require('indent_blankline').setup {
---    -- for example, context is off by default, use this to turn it on
---    show_current_context = true,
---    show_current_context_start = true,
---}
+require('indent_blankline').setup {
+   -- for example, context is off by default, use this to turn it on
+   -- show_current_context = true,
+   -- show_current_context_start = true,
+}
 
 --OCEANIC
 vim.g['oceanic_gutter_like_bg'] = 0
@@ -30,7 +30,8 @@ vim.g['oceanic_italic_comments'] = 0
 vim.g['tokyonight_italic_functions'] = 0
 vim.g['tokyonight_italic_variables'] = 0
 vim.g['tokyonight_italic_keywords'] = 0
---moveline
-vim.g['move_key_modifier'] = 'C'
-vim.g['move_key_modifier_visualmode'] = 'C'
 
+--scroll 
+require('neoscroll').setup()
+ 
+ 

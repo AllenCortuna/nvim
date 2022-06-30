@@ -70,9 +70,8 @@ time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   ["auto-pairs"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/auto-pairs",
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/auto-pairs",
     url = "https://github.com/jiangmiao/auto-pairs"
   },
   ["ayu-vim"] = {
@@ -100,15 +99,24 @@ _G.packer_plugins = {
     url = "https://github.com/junegunn/fzf"
   },
   ["indent-blankline.nvim"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/indent-blankline.nvim",
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
+  },
+  ["material.nvim"] = {
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/material.nvim",
+    url = "https://github.com/marko-cerovac/material.nvim"
   },
   ["neo-tree.nvim"] = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
     url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nui.nvim"] = {
     loaded = true,
@@ -141,12 +149,6 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  sonokai = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/sonokai",
-    url = "https://github.com/sainnhe/sonokai"
-  },
   ["tokyonight-vim"] = {
     loaded = true,
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/tokyonight-vim",
@@ -177,9 +179,8 @@ _G.packer_plugins = {
     url = "https://github.com/vim-airline/vim-airline-themes"
   },
   ["vim-commentary"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-commentary",
+    loaded = true,
+    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-css3-syntax"] = {
@@ -209,23 +210,6 @@ _G.packer_plugins = {
     path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx",
     url = "https://github.com/mxw/vim-jsx"
   },
-  ["vim-material"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-material",
-    url = "https://github.com/hzchirs/vim-material"
-  },
-  ["vim-material-theme"] = {
-    loaded = false,
-    needs_bufread = false,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-material-theme",
-    url = "https://github.com/jdkanani/vim-material-theme"
-  },
-  ["vim-move"] = {
-    loaded = true,
-    path = "/data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/vim-move",
-    url = "https://github.com/matze/vim-move"
-  },
   ["vim-snippets"] = {
     loaded = false,
     needs_bufread = false,
@@ -253,26 +237,26 @@ vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
 vim.cmd [[au FileType css ++once lua require("packer.load")({'vim-css3-syntax'}, { ft = "css" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-tsx', 'vim-javascript', 'vim-jsx', 'typescript-vim'}, { ft = "typescript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-tsx', 'vim-javascript', 'vim-jsx', 'typescript-vim'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-javascript', 'vim-tsx', 'typescript-vim', 'vim-jsx'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-javascript', 'vim-tsx', 'typescript-vim', 'vim-jsx'}, { ft = "typescript" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], true)
-vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]]
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], false)
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]], true)
 vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]]
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/flow.vim]], false)
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim]], true)
 vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim]]
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-javascript/ftdetect/javascript.vim]], false)
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], true)
-vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]]
-time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], false)
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], true)
+vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]]
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-tsx/ftdetect/typescript.vim]], false)
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/typescript-vim/ftdetect/typescript.vim]], true)
 vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/typescript-vim/ftdetect/typescript.vim]]
 time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/typescript-vim/ftdetect/typescript.vim]], false)
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], true)
+vim.cmd [[source /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]]
+time([[Sourcing ftdetect script at: /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/opt/vim-jsx/ftdetect/javascript.vim]], false)
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 

@@ -17,8 +17,8 @@
             enable_character_fade = false
           },
           indent = {
-            indent_size = 0.5,
-            padding = 0.5, -- extra padding on left hand side
+            indent_size = 2.5,
+            padding = 1, -- extra padding on left hand side
             -- indent guides
             with_markers = true,
             indent_marker = "│",
