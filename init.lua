@@ -1,5 +1,4 @@
 
-
 require('plugin')
 require('setting')
 require('map')
@@ -13,5 +12,11 @@ source $HOME/.config/nvim/fnc.vim
 source $HOME/.config/nvim/coc.vim
 ]])
 
+-- PERF: optimised
+-- FIX: bug
+-- HACK: funky
+-- TODO: task
+-- WARNING: ???
+-- NOTE: task todo
 
 

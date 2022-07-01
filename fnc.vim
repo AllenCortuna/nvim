@@ -29,9 +29,10 @@ au BufNewFile,BufRead *.ts setlocal filetype=typescript
 au BufNewFile,BufRead *.tsx setlocal filetype=typescript.tsx
 au BufNewFile,BufRead *.jsx setlocal filetype=javascript.jsx
 
+"plugin
 augroup packer_user_config
   autocmd!
-  autocmd BufWritePost plugins.lua source <afile> | PackerCompile
+  autocmd BufWritePost plugin.lua source <afile> | PackerCompile
 augroup end
-
-" autocmd Filetype vim,javascript,css,html,python,jsx |autocmd InsertLeave * :write 
+ 
+autocmd InsertLeave * :write

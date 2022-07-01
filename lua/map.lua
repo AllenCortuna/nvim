@@ -42,9 +42,8 @@ nmap('<F5>',':Neotree toggle <cr>')
 nmap('<leader>pc',':PackerClean <cr>')
 nmap('<leader>p',':PackerSync <cr>')
 nmap('<space>p', ':packer')
-nmap('<space>u', "['UltiSnipsEdit! <cr>")
 nmap('<c-k>','<c-u>') 
 nmap('<c-j>','<c-d>') 
 vim.api.nvim_set_keymap('n', '<c-k>', '<c-u>',{ noremap = false,silent=true})
 vim.api.nvim_set_keymap('n', '<c-j>', '<c-d>',{ noremap = false,silent=true})
- 
+

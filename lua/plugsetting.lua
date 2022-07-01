@@ -33,5 +33,6 @@ vim.g['tokyonight_italic_keywords'] = 0
 
 --scroll 
 require('neoscroll').setup()
+require("todo-comments").setup()
  
  
