@@ -26,6 +26,15 @@ vim.g['airline_theme'] = 'tokyonight'
 vim.g['tokyonight_style'] ='night' 
 --available: night, storm
 vim.g['tokyonight_enable_italic'] = 0
+ 
+ 
+--OCEANIC
+vim.g['oceanic_gutter_like_bg'] = 0
+vim.g['oceanic_italic_comments'] = 0
+--tokyonight
+vim.g['tokyonight_italic_functions'] = 0
+vim.g['tokyonight_italic_variables'] = 0
+vim.g['tokyonight_italic_keywords'] = 0
 
 --colorscheme sonokai
 --colorscheme edge

@@ -35,4 +35,4 @@ augroup packer_user_config
   autocmd BufWritePost plugin.lua source <afile> | PackerCompile
 augroup end
  
-autocmd InsertLeave * :write
+" autocmd InsertLeave * :write

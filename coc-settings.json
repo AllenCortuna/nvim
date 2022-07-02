@@ -29,6 +29,7 @@
   },
   "suggest.floatEnable": true,
   "diagnostic.messageTarget": "float",
-  "signature.target": "float"
+  "signature.target": "float",
+  "suggest.noselect": false
 }
  

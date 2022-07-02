@@ -10,32 +10,33 @@ return require('packer').startup(function()
   use { 'ayu-theme/ayu-vim',opt=true }
   use { 'marko-cerovac/material.nvim'}
 
--- WARNING: syntax
+-- : syntax
   use {'hail2u/vim-css3-syntax', ft={'css'}}
-  use { 'leafgarland/typescript-vim',opt= true, ft=js}
+  use { 'leafgarland/typescript-vim', ft=js}
   use { 'ianks/vim-tsx',ft=js}
   use {'mxw/vim-jsx' ,ft=js}
   use {'pangloss/vim-javascript' ,ft=js}
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
    
--- WARNING: interface  
+-- : interface  
   use {'lukas-reineke/indent-blankline.nvim'}
   use {'kyazdani42/nvim-web-devicons' }
-  use { 'vim-airline/vim-airline-themes'}
-  use { 'vim-airline/vim-airline' }
-  use { 'romgrk/barbar.nvim', n='BufReadPost'}
+  -- use {'romgrk/barbar.nvim'}
+   use {'akinsho/bufferline.nvim', tag = "v2.*" }
+   use{"NTBBloodbath/galaxyline.nvim"}
    
--- WARNING: utils   
+   
+-- : utils   
   use { 'tpope/vim-commentary'}
   use { 'honza/vim-snippets'}
   use { 'SirVer/ultisnips'}
   use { 'jiangmiao/auto-pairs'}
-  use { 'junegunn/fzf',cmd={'FZF'}}
-  use {'karb94/neoscroll.nvim'}
   use { 'neoclide/coc.nvim', branch = 'release'}
   use { "folke/todo-comments.nvim",requires = "nvim-lua/plenary.nvim",}
+   
      
--- WARNING: file explorer
+-- : file explorer
+  use { 'junegunn/fzf',cmd={'FZF'}}
   use {
     "nvim-neo-tree/neo-tree.nvim",
       branch = "v2.x",

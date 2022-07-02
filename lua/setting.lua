@@ -18,7 +18,7 @@ set.shiftwidth = 2
 set.tabstop = 2
 set.expandtab = true
 set.backup = no
-
+set.showmode = false
 --Do not let cursor scroll below or above N number of lines when scrolling.
 set.scrolloff = 0
 
