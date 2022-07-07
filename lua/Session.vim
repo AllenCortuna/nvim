@@ -13,15 +13,15 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +44 setting.lua
-badd +0 ~/.config/nvim/fnc.vim
+badd +63 setting.lua
+badd +0 plug/gitsign.lua
 argglobal
 %argdel
 $argadd setting.lua
-edit ~/.config/nvim/fnc.vim
+edit plug/gitsign.lua
 argglobal
 balt setting.lua
-setlocal fdm=marker
+setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
 setlocal fdi=#
@@ -29,13 +29,14 @@ setlocal fdl=0
 setlocal fml=1
 setlocal fdn=20
 setlocal fen
-let s:l = 39 - ((21 * winheight(0) + 16) / 32)
+silent! normal! zE
+let &fdl = &fdl
+let s:l = 39 - ((17 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
 keepjumps 39
-normal! 0
-if exists(':tcd') == 2 | tcd ~/.config/nvim | endif
+normal! 017|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

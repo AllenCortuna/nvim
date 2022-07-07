@@ -1,6 +1,5 @@
 local u = require('utils') 
   
- -- vim.g['coc_global_extensions'] = { 'coc-html', 'coc-css', 'coc-angular', 'coc-highlight',  'coc-tsserver', 'coc-json', 'coc-svelte', 'coc-prettier'} 
   
  vim.cmd([[nmap <silent> <leader>jd <Plug>(coc-definition)]]) 
  vim.cmd([[nmap <silent> <leader>jr <Plug>(coc-references)]]) 
@@ -13,14 +12,14 @@ local u = require('utils')
  u.map('i', '<Tab>', [[pumvisible() ? "\<C-n>" : "\<Tab>"]], {noremap = true, expr = true}) 
  u.map('i', '<S-Tab>', [[pumvisible() ? "\<C-p>" : "\<S-Tab>"]], {noremap = true, expr = true}) 
   
- u.map('n', '<leader>h', ':lua show_documentation()<CR>', { noremap = false, silent = false }); 
- u.map('n', '<leader>p', ':CocCommand prettier.formatFile<CR>', { noremap = false, silent = false }); 
+ -- u.map('n', '<leader>h', ':lua show_documentation()<CR>', { noremap = false, silent = false }); 
+ -- u.map('n', '<leader>p', ':CocCommand prettier.formatFile<CR>', { noremap = false, silent = false }); 
   
- -- function show_documentation() 
+  -- function show_documentation() 
  --    local filetype = vim.bo.filetype 
   
- -- --    if filetype == 'vim'  or filetype == 'help' then 
- -- --     vim.api.nvim_command('h ' .. filetype) 
+ --    if filetype == 'vim'  or filetype == 'help' then 
+ --     vim.api.nvim_command('h ' .. filetype) 
   
  --    elseif (vim.fn['coc#rpc#ready']()) then 
  --     vim.fn.CocActionAsync('doHover') 

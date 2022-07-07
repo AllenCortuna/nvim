@@ -6,9 +6,6 @@ set.tabstop = 2
 set.expandtab = true
 set.compatible = false
 set.errorformat:append('%f|%l col %c|%m')
-
-
-
 set.cmdheight = 1
 set.updatetime = 300
 set.encoding = 'UTF-8'
@@ -19,6 +16,7 @@ set.tabstop = 2
 set.expandtab = true
 set.backup = no
 set.showmode = false
+
 --Do not let cursor scroll below or above N number of lines when scrolling.
 set.scrolloff = 0
 
@@ -42,12 +40,12 @@ set.showcmd = true
 set.hlsearch = true
 
 --Set the commands to save in history default number is 20.
-set.history = 1000
+set.history = 100
 
 --Enable auto completion menu after pressing TAB.
 set.wildmenu = true
 
-
+set.relativenumber = true
 set.splitright = false
 
 --Wildmenu will ignore files with these extensions.
@@ -57,9 +55,6 @@ set.hidden = true
 
 set.background = 'dark'
 set.termguicolors = true
-vim.g['tokyonight_style'] ='night'
---available: night, storm
-vim.g['tokyonight_enable_italic'] = 0
 
 
 -- highlight Cursor guifg= blue guibg=blue
@@ -70,18 +65,17 @@ vim.g['tokyonight_enable_italic'] = 0
 -- set guicursor+=i:blinkwait10
 
 
-
 vim.cmd([[
-
-set shortmess+=c
-set nocompatible
-filetype on
-filetype plugin on
-filetype indent on
-syntax on
-syntax enable  
-set wildmode=list:longest
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
-
+  set scl=yes 
+  set listchars=extends:>,precedes:<
+  set shortmess+=c
+  set nocompatible
+  filetype on
+  filetype plugin on
+  filetype indent on
+  syntax on
+  set wildmode=list:longest
+  set backupdir=~/.vim/backup
+  set directory=~/.vim/tmp
+  "set showbreak =+++\
 ]])

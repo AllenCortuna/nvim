@@ -25,7 +25,5 @@ require('indent_blankline').setup {
 
 
 --scroll 
--- require('neoscroll').setup()
-require("todo-comments").setup()
- 
+require('cinnamon').setup()
  
