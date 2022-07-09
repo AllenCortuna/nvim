@@ -3,6 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 local n = event
 local js = {'typescript','javascript'}
 local et = 'InsertEnter'
+local br = 'BufRead'
  
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
@@ -23,21 +24,20 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
    
 -- : interface  
-  use {'lukas-reineke/indent-blankline.nvim',n =et}
+  use {'lukas-reineke/indent-blankline.nvim',n = br}
   use {'kyazdani42/nvim-web-devicons', n =et}
   use { "NTBBloodbath/galaxyline.nvim",n =et}
-  use { 'romgrk/barbar.nvim',n = et }
-  use { 'p00f/nvim-ts-rainbow',n ='BufRead' }  
+  use { 'romgrk/barbar.nvim',n = br }
+  use { 'p00f/nvim-ts-rainbow',n = br }  
   use {'lewis6991/gitsigns.nvim'}
  
 -- : utils   
-  use { 'tpope/vim-commentary', n = et}
-  use { 'honza/vim-snippets', n =et }
-  use { 'SirVer/ultisnips', n = et}
+  use { 'honza/vim-snippets', n =br }
+  use { 'SirVer/ultisnips', n = br}
   use { 'jiangmiao/auto-pairs', n = et}
-  use { 'neoclide/coc.nvim', branch = 'release',n = et}
+  use { 'neoclide/coc.nvim', branch = 'release',n = br}
   use { 'declancm/cinnamon.nvim',n = et }
-     
+ 
 -- : file explorer
   use { 'junegunn/fzf',cmd={'FZF'}}
   use { "nvim-neo-tree/neo-tree.nvim",
@@ -46,8 +46,14 @@ return require('packer').startup(function()
         "nvim-lua/plenary.nvim",
         "kyazdani42/nvim-web-devicons", 
         "MunifTanjim/nui.nvim",
-      },n = et} 
+      },n = br} 
 
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
 end)
 
 

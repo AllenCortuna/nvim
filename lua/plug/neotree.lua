@@ -125,8 +125,10 @@
               --"*.meta"
             },
             never_show = { -- remains hidden even if visible is toggled to true
-              --".DS_Store",
-              --"thumbs.db"
+              ".DS_Store",
+              "thumbs.db",
+              "node_modules",
+              "git",
             },
           },
           follow_current_file = false, -- This will find and focus the file in the active buffer every

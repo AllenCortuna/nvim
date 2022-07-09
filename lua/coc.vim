@@ -1,11 +1,11 @@
 
 
 
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-  set signcolumn=number
-else
- set signcolumn=yes
-endif
+" if has("nvim-0.5.0") || has("patch-8.1.1564")
+"   set signcolumn=number
+" else
+"  set signcolumn=yes
+" endif
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -85,7 +85,7 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 nmap <leader>f  <Plug>(coc-fix-current)
 
 " Run the Code Lens action on the current line.
-nmap <leader>cl  <Plug>(coc-codelens-action)
+nmap <leader>l  <Plug>(coc-codelens-action)
 
 " Map function and class text objects
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.

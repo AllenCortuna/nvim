@@ -31,9 +31,8 @@ require'plug.tsRainbow'
 require'plug.gitsign'
 
 vim.cmd([[
-source $HOME/.config/nvim/coc.vim
-source $HOME/.config/nvim/fnc.vim
+source $HOME/.config/nvim/lua/fnc.vim
+source $HOME/.config/nvim/lua/coc.vim
 ]])
 
 
--- NOTE: haha 

@@ -5,7 +5,7 @@ local set = vim.opt
 set.tabstop = 2
 set.expandtab = true
 set.compatible = false
-set.errorformat:append('%f|%l col %c|%m')
+-- set.errorformat:append('%f|%l col %c|%m')
 set.cmdheight = 1
 set.updatetime = 300
 set.encoding = 'UTF-8'
@@ -66,8 +66,7 @@ set.termguicolors = true
 
 
 vim.cmd([[
-  set scl=yes 
-  set listchars=extends:>,precedes:<
+  set listchars=extends:>
   set shortmess+=c
   set nocompatible
   filetype on
@@ -77,5 +76,4 @@ vim.cmd([[
   set wildmode=list:longest
   set backupdir=~/.vim/backup
   set directory=~/.vim/tmp
-  "set showbreak =+++\
 ]])
