@@ -1,6 +1,6 @@
 
 local set = vim.opt
-
+set.timeoutlen=200
 -- Set the behavior of tab
 set.tabstop = 2
 set.expandtab = true
@@ -33,7 +33,7 @@ set.showcmd = true
 --show match in search
 set.showmatch = true
 
---Show partial command you type in the last line of the scr
+--Show partial command youtype in the last line of the scr
 set.showcmd = true
 
 --Use highlighting when doing a search.

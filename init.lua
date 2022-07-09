@@ -29,6 +29,7 @@ require'plug.neotree'
 require'plug.scroll'
 require'plug.tsRainbow'
 require'plug.gitsign'
+require'plug.wkey'
 
 vim.cmd([[
 source $HOME/.config/nvim/lua/fnc.vim

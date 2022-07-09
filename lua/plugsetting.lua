@@ -1,12 +1,4 @@
 
---PLUGCONFIG -----
---airline
--- vim.g['airline_powerline_fonts'] = 2
--- vim.g['airline#extensions#tabline#enabled'] = 0
--- vim.g['airline#extensions#tabline#left_sep'] = ''
--- vim.g['airline#extensions#tabline#left_alt_sep'] = ''
--- vim.g['airline#extensions#tabline#formatter'] = 'default'
-
 
 --ULTISNIPPETS
 -- Set ultisnips triggers
@@ -17,13 +9,17 @@ vim.g['UltiSnipsJumpForwardTrigger'] = '<tab>'
 -- vim.g['UltiSnipsJumpForwardTrigger'] = '<c-b>'
 
 ----IDENTGUIDE
-require('indent_blankline').setup {
-   -- for example, context is off by default, use this to turn it on
-   -- show_current_context = true,
-   -- show_current_context_start = true,
-}
+require('indent_blankline').setup {}
 
 
+
+ 
+-- npairs.setup({ map_cr = true })
+require('nvim-ts-autotag').setup({
+  filetypes = { "html", "xml", "javascript", "javascriptreact", "jsx" },
+})
+
+require("nvim-autopairs").setup()
 --scroll 
 require('cinnamon').setup()
- 
+

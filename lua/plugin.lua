@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 local n = event
 local js = {'typescript','javascript'}
 local et = 'InsertEnter'
-local br = 'BufRead'
+local buf = 'BufRead'
  
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
@@ -24,19 +24,20 @@ return require('packer').startup(function()
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
    
 -- : interface  
-  use {'lukas-reineke/indent-blankline.nvim',n = br}
+  use {'lukas-reineke/indent-blankline.nvim',n = buf}
   use {'kyazdani42/nvim-web-devicons', n =et}
   use { "NTBBloodbath/galaxyline.nvim",n =et}
-  use { 'romgrk/barbar.nvim',n = br }
-  use { 'p00f/nvim-ts-rainbow',n = br }  
+  use { 'romgrk/barbar.nvim',n = buf }
+  use { 'p00f/nvim-ts-rainbow',n = buf }  
   use {'lewis6991/gitsigns.nvim'}
  
 -- : utils   
-  use { 'honza/vim-snippets', n =br }
-  use { 'SirVer/ultisnips', n = br}
-  use { 'jiangmiao/auto-pairs', n = et}
-  use { 'neoclide/coc.nvim', branch = 'release',n = br}
+  use { 'honza/vim-snippets', n =buf }
+  use { 'SirVer/ultisnips', n = buf}
+  use { 'neoclide/coc.nvim', branch = 'release',n= buf}
   use { 'declancm/cinnamon.nvim',n = et }
+  use { 'windwp/nvim-ts-autotag',n = buf }
+  use {"windwp/nvim-autopairs", n = buf}
  
 -- : file explorer
   use { 'junegunn/fzf',cmd={'FZF'}}
@@ -46,13 +47,21 @@ return require('packer').startup(function()
         "nvim-lua/plenary.nvim",
         "kyazdani42/nvim-web-devicons", 
         "MunifTanjim/nui.nvim",
-      },n = br} 
+      },n = buf} 
 
+  -- comment
   use {
       'numToStr/Comment.nvim',
       config = function()
           require('Comment').setup()
       end
+  }
+  --key
+  use {
+    "folke/which-key.nvim",
+    config = function()
+      require("which-key").setup {}
+    end
   }
 end)
 
