@@ -28,6 +28,7 @@ require'plug.barbar'
 require'plug.neotree'
 require'plug.scroll'
 require'plug.tsRainbow'
+require'plug.treesitter'
 require'plug.gitsign'
 require'plug.wkey'
 

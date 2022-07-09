@@ -17,8 +17,9 @@ wk.register({
   q = {"<cmd>q<cr>", "quit"},
   s = {"<cmd>mks!<cr>", "save session"},
   c = {"gcc", "toggle comment line"},
-  z = {"<cmd>wall<cr>", "save all"},
+  z = {"<cmd>ZenMode<cr>", "ZenMode"},
   u = {"<cmd>UltiSnipsEdit<cr>", "Snippet"},
+  a = {"<cmd>wall<cr>", "save all"}
   
 }, { prefix = "<leader>" })
 

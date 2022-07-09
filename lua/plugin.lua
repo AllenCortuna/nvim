@@ -34,7 +34,7 @@ return require('packer').startup(function()
 -- : utils   
   use { 'honza/vim-snippets', n =buf }
   use { 'SirVer/ultisnips', n = buf}
-  use { 'neoclide/coc.nvim', branch = 'release',n= buf}
+  use { 'neoclide/coc.nvim',branch = 'release',n= buf}
   use { 'declancm/cinnamon.nvim',n = et }
   use { 'windwp/nvim-ts-autotag',n = buf }
   use {"windwp/nvim-autopairs", n = buf}
@@ -59,10 +59,13 @@ return require('packer').startup(function()
   --key
   use {
     "folke/which-key.nvim",
-    config = function()
-      require("which-key").setup {}
-    end
+    config = function()require("which-key").setup {}end
   }
+
+  use {
+  "folke/zen-mode.nvim",
+  config = function()require("zen-mode").setup {}end
+}
 end)
 
 

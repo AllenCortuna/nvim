@@ -12,7 +12,6 @@ set.encoding = 'UTF-8'
 set.number = true
 set.cursorline = true
 set.shiftwidth = 2
-set.tabstop = 2
 set.expandtab = true
 set.backup = no
 set.showmode = false
@@ -28,13 +27,10 @@ set.ignorecase = true
 set.smartcase = true
 
 --Show partial command you type in the last line of the screen.
-set.showcmd = true
+set.showcmd = false
 
 --show match in search
 set.showmatch = true
-
---Show partial command youtype in the last line of the scr
-set.showcmd = true
 
 --Use highlighting when doing a search.
 set.hlsearch = true
