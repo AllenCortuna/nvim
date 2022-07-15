@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 local n = event
 local js = {'typescript','javascript'}
 local et = 'InsertEnter'
-local buf = 'BufRead'
+local buf = 'BufReadPost'
  
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
@@ -29,7 +29,8 @@ return require('packer').startup(function()
   use { "NTBBloodbath/galaxyline.nvim",n =et}
   use { 'romgrk/barbar.nvim',n = buf }
   use { 'p00f/nvim-ts-rainbow',n = buf }  
-  use {'lewis6991/gitsigns.nvim'}
+  use {'lewis6991/gitsigns.nvim', n = buf}
+  use { 'Darazaki/indent-o-matic', n = buf}
  
 -- : utils   
   use { 'honza/vim-snippets', n =buf }
@@ -37,10 +38,14 @@ return require('packer').startup(function()
   use { 'neoclide/coc.nvim',branch = 'release',n= buf}
   use { 'declancm/cinnamon.nvim',n = et }
   use { 'windwp/nvim-ts-autotag',n = buf }
-  use {"windwp/nvim-autopairs", n = buf}
+  use { "windwp/nvim-autopairs", n = buf}
  
 -- : file explorer
-  use { 'junegunn/fzf',cmd={'FZF'}}
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} },
+    n = buf
+  }
   use { "nvim-neo-tree/neo-tree.nvim",
       branch = "v2.x",
       requires = { 
@@ -52,6 +57,7 @@ return require('packer').startup(function()
   -- comment
   use {
       'numToStr/Comment.nvim',
+      n = buf,
       config = function()
           require('Comment').setup()
       end
@@ -59,13 +65,16 @@ return require('packer').startup(function()
   --key
   use {
     "folke/which-key.nvim",
+    n = buf,
     config = function()require("which-key").setup {}end
   }
 
   use {
   "folke/zen-mode.nvim",
+  n = buf,
   config = function()require("zen-mode").setup {}end
 }
+ 
 end)
 
 

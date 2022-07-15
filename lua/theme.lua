@@ -16,7 +16,6 @@ vim.ayucolor='dark' --for dark version of theme
 
 --MATERIAL
 vim.g['material_style'] = "deep ocean" 
-vim.api.nvim_set_keymap('n', '<leader><space>', [[<Cmd>lua require('material.functions').toggle_style()<CR>]], { noremap = true, silent = true })
 --vim.g:material_style='dark'
 
  

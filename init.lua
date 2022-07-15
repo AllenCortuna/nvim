@@ -11,6 +11,7 @@
     path = vim.fn.stdpath('cache')..'/luacache_modpaths',
   }
 }
+ 
 require('impatient')
 require'impatient'.enable_profile()
 
@@ -20,7 +21,8 @@ require'setting'
 require'map'
 require'theme'
 require'plugsetting'
- 
+require'key'
+
 -- plugsetting 
 require'plug.dev-icons'
 require'plug.galaxyline'
@@ -29,8 +31,9 @@ require'plug.neotree'
 require'plug.scroll'
 require'plug.tsRainbow'
 require'plug.treesitter'
-require'plug.gitsign'
 require'plug.wkey'
+require'plug.gitsign'
+
 
 vim.cmd([[
 source $HOME/.config/nvim/lua/fnc.vim
