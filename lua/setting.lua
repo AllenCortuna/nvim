@@ -48,7 +48,7 @@ set.pumheight= 10-- Height of the pop up menu
 set.clipboard= "unnamedplus"--Connection to the system clipboard
 set.preserveindent = true -- Preserve indent structure as much as possible 
 set.lazyredraw = true -- lazily redraw screen 
-set.laststatus = 2 --globalstatus
+set.laststatus = 2 -- globalstatus
 set.completeopt = {"menuone", "noselect"}-- Options for insert mode completion
 
 -- highlight Cursor guifg= blue guibg=blue
@@ -57,7 +57,15 @@ set.completeopt = {"menuone", "noselect"}-- Options for insert mode complet
 -- set guicursor+=i:block-iCursor
 -- set guicursor+=n-v-c:blinkon0
 -- set guicursor+=i:blinkwait10
-
+vim.g["do_filetype_lua"] = 1 -- use filetype.lua 
+vim.g["did_load_filetypes"] = 0 -- don't use filetype.vim 
+vim.g["loaded_gzip"] = true --disable gzip
+vim.g["loaded_logipat"] = true -- disable logipat
+vim.g["loaded_matchit"] = true -- disable matchit
+vim.g["loaded_netrwFileHandlers"] = true --disable netrw
+vim.g["loaded_netrwPlugin"] = true -- disable netrw
+vim.g["loaded_netrwSettngs"]  = true -- disable netrw
+vim.g["loaded_remote_plugins"] = true --disable remote plugins
 
 vim.cmd([[
 

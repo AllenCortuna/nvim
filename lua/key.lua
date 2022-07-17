@@ -5,14 +5,17 @@ vim.g['maplocalleader']= "@"
 local wk = require("which-key")
     -- b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
 wk.register({
+  -- PACKER
   p = {
     name = "packer", -- optional group name
     s = { "<cmd>PackerSync<cr>", "PackeSync" },
     i = { "<cmd>PackerInstall<cr>", "PackerInstall" },
     u = { "<cmd>PackerUpdate<cr>", "PackerUpdate"},
-    c = { "<cmd>PackerClean<cr>", "PackerClean" }
+    c = { "<cmd>PackerClean<cr>", "PackerClean" },
+    f = { "<cmd>PackerStatus<cr>", "PackerStatus"}
   },
 
+  -- FILES
   f = {
     name = "Files",
     f = {"<cmd>Telescope find_files<cr>", "Find files"},
@@ -22,13 +25,34 @@ wk.register({
     r = {"<cmd>Telescope oldfiles<cr>", "Recent files"},
   },
 
+-- SEARCH
   s = {
-    name= "Search",
+    name = "Search",
     w = {"<cmd>Telescope live_grep<cr>", "Search word"},
     s = {"<cmd>Telescope grep_string<cr>", "Search word cursor"},
     r = {"<cmd>Telescope registers<cr>", "Registers"},
-    k = {"<cmd>Telescope keymaps<cr>", "Search keymap"},
+    k = {"<cmd>Maps<cr>", "Search keymap"},
+    c = {"<cmd>Colors<cr>", "Colorscheme"},
+    m = {"<cmd>Command<cr>", "Command"},
+    u = {"<cmd>Snippets<cr>", "Snippets"},
   },
+
+  -- COC
+  c = {
+    name = "Coc",
+    p = {"<cmd>Format<cr>", "Format"},
+  },
+
+  -- SESSIONMANAGER
+  m = {
+    name = "Session",
+    l = {"<cmd>SessionManager load_session<cr>", "Load session"},
+    r = {"<cmd>SessionManager load_last_session<cr>", "Recent session"},
+    c = {"<cmd>SessionManager load_current_dir_session<cr>", "Directory session"},
+    k = {"<cmd>mks!<cr>", "Save"},
+    d = {"<cmd>SessionManager delete_session<cr>", "Delete session"},
+  },
+
 
   g = {
     name = "Git",
@@ -37,7 +61,7 @@ wk.register({
     
   },
 
-  ["<leader>"] = {"<cmd>w<cr>", "Save"},
+  ["<leader>"] = {"<cmd>w!<cr>", "Save"},
   q = {"<cmd>q<cr>", "quit"},
   u = {"<cmd>UltiSnipsEdit<cr>", "Snippet"},
   a = {"<cmd>wall<cr>", "save all"},

@@ -1,7 +1,11 @@
+vim.cmd([[
 
-"  -----
+" if has("nvim-0.5.0") || has("patch-8.1.1564")
+"   set signcolumn=number
+" else
+"  set signcolumn=yes
+" endif
 
-autocmd BufNewFile * :write
 autocmd ExitPre * :write
 
 augroup filetype_vim
@@ -15,8 +19,6 @@ augroup exe_code
     \ sp<CR> :term python3 %<CR> :startinsert<CR> 
 augroup END
 
-" If the current file type is HTML, set indentation to 2 spaces.
-autocmd Filetype html setlocal tabstop=2 shiftwidth=2 expandtab
 " If Vim version is equal to or greater than 7.3 enable undofile.This allows you to undo changes to a file even after saving it.
 if version >= 703
     set undodir=~/.vim/backup
@@ -34,6 +36,11 @@ augroup packer_user_config
   autocmd!
   autocmd BufWritePost plugin.lua source <afile> | PackerCompile
 augroup end
-  
-" autocmd InsertLeave * :write
-autocmd BufRead * :set scl=yes
+
+autocmd BufNewFile * :write
+autocmd VimEnter * :TSUpdate
+
+]])
+--autocmd BufRead * :set scl=yes
+-- autocmd InsertLeave * :write
+-- autocmd BufNewFile * :write

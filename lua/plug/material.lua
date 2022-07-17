@@ -2,7 +2,7 @@ require('material').setup({
 
 	contrast = {
 		sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-		floating_windows = false, -- Enable contrast for floating windows
+		floating_windows = true, -- Enable contrast for floating windows
 		line_numbers = false, -- Enable contrast background for line numbers
 		sign_column = false, -- Enable contrast background for the sign column
 		cursor_line = false, -- Enable darker background for the cursor line
@@ -26,7 +26,7 @@ require('material').setup({
 
 	high_visibility = {
 		lighter = false, -- Enable higher contrast text for lighter style
-		darker = false -- Enable higher contrast text for darker style
+		darker = true -- Enable higher contrast text for darker style
 	},
 
 	disable = {
@@ -41,7 +41,7 @@ require('material').setup({
 
 	async_loading = true, -- Load parts of the theme asyncronously for faster startup (turned on by default)
 
-	custom_highlights = {} -- Overwrite highlights with your own
+	custom_highlights = {}, -- Overwrite highlights with your own
 
 	plugins = { -- Here, you can disable(set to false) plugins that you don't use or don't want to apply the theme to
 		trouble = true,

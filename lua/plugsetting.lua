@@ -1,5 +1,6 @@
 
 
+
 --ULTISNIPPETS
 -- Set ultisnips triggers
 vim.g['UltiSnipsExpandTrigger'] = '<tab>'
@@ -8,27 +9,34 @@ vim.g['UltiSnipsJumpForwardTrigger'] = '<tab>'
 -- vim.g['UltiSnipsExpandTrigger'] = '<tab>'
 -- vim.g['UltiSnipsJumpForwardTrigger'] = '<c-b>'
 
-----IDENTGUIDE
-require('indent_blankline').setup {}
+require('material').setup()
+--AYU
+--vim.ayucolor="light-- --for light version of theme
+--vim.ayucolor="mirage----for mirage version of theme
+vim.ayucolor='dark' --for dark version of theme
 
--- npairs.setup({ map_cr = true })
-require('nvim-ts-autotag').setup({
-  filetypes = { "html", "xml", "javascript", "javascriptreact", "jsx" },
-})
+--MATERIAL
+vim.g['material_style'] = "deep ocean" 
+--vim.g:material_style='dark'
 
-require("nvim-autopairs").setup()
---scroll 
-require('cinnamon').setup()
+ 
+vim.g['airline_theme'] = 'tokyonight'
 
-require('indent-o-matic').setup {
-    -- The values indicated here are the defaults
 
-    -- Number of lines without indentation before giving up (use -1 for infinite)
-    max_lines = 2048,
+vim.g['tokyonight_style'] ='night' 
+--available: night, storm
+vim.g['tokyonight_enable_italic'] = 0
+ 
 
-    -- Space indentations that should be detected
-    standard_widths = { 2, 4, 8 },
+--OCEANIC
+vim.g['oceanic_gutter_like_bg'] = 0
+vim.g['oceanic_italic_comments'] = 0
+--tokyonight
+vim.g['tokyonight_italic_functions'] = 0
+vim.g['tokyonight_italic_variables'] = 0
+vim.g['tokyonight_italic_keywords'] = 0
 
-    -- Skip multi-line comments and strings (more accurate detection but less performant)
-    skip_multiline = true,
-}
+--colorscheme material
+--colorscheme ayu
+-- colorscheme oceanicnext  
+vim.cmd 'colorscheme material'

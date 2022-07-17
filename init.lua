@@ -1,6 +1,6 @@
 
- 
- 
+
+
  _G.__luacache_config = {
   chunks = {
     enable = true,
@@ -11,33 +11,27 @@
     path = vim.fn.stdpath('cache')..'/luacache_modpaths',
   }
 }
- 
+
 require('impatient')
 require'impatient'.enable_profile()
 
-
-require'plugin'
 require'setting'
-require'map'
-require'theme'
-require'plugsetting'
+require'plugin'
+require'keymap'
 require'key'
+require'fnc'
+require'coc'
+require'plugsetting'
+require'plug.material'
 
 -- plugsetting 
-require'plug.dev-icons'
-require'plug.galaxyline'
-require'plug.barbar'
-require'plug.neotree'
-require'plug.scroll'
-require'plug.tsRainbow'
-require'plug.treesitter'
-require'plug.wkey'
-require'plug.gitsign'
-
-
-vim.cmd([[
-source $HOME/.config/nvim/lua/fnc.vim
-source $HOME/.config/nvim/lua/coc.vim
-]])
-
+--require'plug.treesitter'
+--require'plug.galaxyline'
+--require'plug.barbar'
+--require'plug.neotree'
+--require'plug.scroll'
+--require'plug.tsRainbow'
+--require'plug.wkey'
+-- require'plug.gitsign'
+-- require'plug.session'
 

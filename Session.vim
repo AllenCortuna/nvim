@@ -13,13 +13,14 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +6 opt.lua
-badd +23 lua/setting.lua
+badd +31 init.lua
+badd +95 lua/plugin.lua
+badd +40 lua/fnc.lua
 argglobal
 %argdel
-edit lua/setting.lua
+edit lua/fnc.lua
 argglobal
-balt opt.lua
+balt lua/plugin.lua
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -30,12 +31,12 @@ setlocal fdn=20
 setlocal fen
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 54 - ((15 * winheight(0) + 16) / 32)
+let s:l = 40 - ((11 * winheight(0) + 16) / 32)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 54
-normal! 022|
+keepjumps 40
+normal! 02|
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
