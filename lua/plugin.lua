@@ -1,29 +1,25 @@
 vim.cmd [[packadd packer.nvim]]
  
-local n = event
-local js = {"typescript","javascript"}
-local et = "VimEnter"
-local buf = "BufReadPost"
- 
+  -- use { "Shatur/neovim-session-manager",}
+  
 return require("packer").startup(function()
   use "wbthomason/packer.nvim"
   use "lewis6991/impatient.nvim"
+  -- use "nathom/filetype.nvim"
 
   --key
   use {"folke/which-key.nvim", 
     config = function() require "plug.wkey" end
   }
 
--- : syntax
-  use { "hail2u/vim-css3-syntax", ft={"css"}}
-  use { "leafgarland/typescript-vim", ft={"javascript"}}
-  use { "ianks/vim-tsx",ft={"javascript"}}
-  use { "mxw/vim-jsx" ,ft={"javascript"}}
-  use { "pangloss/vim-javascript" ,ft={"javascript"}}
 
-  -- use { "Shatur/neovim-session-manager",}
-  use { "junegunn/fzf" , event = "VimEnter"}
-  use { "junegunn/fzf.vim" ,event = "VimEnter"}
+-- file explorer
+  use { "junegunn/fzf", 
+    cmd = "FZF"
+  }
+  use { "junegunn/fzf.vim",
+    event = "BufRead"
+  }
 
    
 -- identline
@@ -35,17 +31,17 @@ return require("packer").startup(function()
 -- syntax high
   use { "nvim-treesitter/nvim-treesitter",
      run = ":TSUpdate",
-     event = {"BufRead", "BufNewFile" },
-     cmd = {
-       "TSInstall",
-       "TSInstallInfo",
-       "TSInstallSync",
-       "TSUninstall",
-       "TSUpdate",
-       "TSUpdateSync",
-       "TSDisableAll",
-       "TSEnableAll",
-     },
+ --     event = "BufWinEnter",
+ --     cmd = {
+ --       "TSInstall",
+ --       "TSInstallInfo",
+ --       "TSInstallSync",
+ --       "TSUninstall",
+ --       "TSUpdate",
+ --       "TSUpdateSync",
+ --       "TSDisableAll",
+ --       "TSEnableAll",
+ --     },
      config = function() require "plug.treesitter" end
    }
 
@@ -63,7 +59,7 @@ return require("packer").startup(function()
 
 -- bufferline
   use { "romgrk/barbar.nvim", 
-    after ="nvim-web-devicons",
+    after = "nvim-web-devicons",
     config = function() require "plug.barbar" end,
     
   }
@@ -121,7 +117,7 @@ return require("packer").startup(function()
     config = function() require"plug.neotree" end,
     } 
 
-  -- COMMENT
+  -- comment
   use { "numToStr/Comment.nvim", 
     keys = {"gc"},
     config = function() require("Comment").setup()end 
@@ -130,14 +126,16 @@ return require("packer").startup(function()
   -- zenmode
   use {
     "folke/zen-mode.nvim",
-    event = {"BufRead", "BufNewFile"},
+    cmd = "ZenMode",
     config = function()require("zen-mode").setup {}end 
   }
 
   -- theme
   use { "adrian5/oceanic-next-vim", opt = true}
   use { "ghifarit53/tokyonight-vim", opt = true}
-  use { "marko-cerovac/material.nvim"}
+  use { "marko-cerovac/material.nvim",
+    config = function() require "plug.material" end,
+  }
 
  
 end)

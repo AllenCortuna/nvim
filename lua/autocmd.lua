@@ -38,7 +38,6 @@ augroup packer_user_config
 augroup end
 
 autocmd BufNewFile * :write
-autocmd VimEnter * :TSUpdate
 
 ]])
 --autocmd BufRead * :set scl=yes

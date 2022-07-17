@@ -8,8 +8,6 @@ vim.g['UltiSnipsJumpForwardTrigger'] = '<tab>'
 -- vim.g['UltiSnipsJumpBackwardTrigger'] = '<c-z>'
 -- vim.g['UltiSnipsExpandTrigger'] = '<tab>'
 -- vim.g['UltiSnipsJumpForwardTrigger'] = '<c-b>'
-
-require('material').setup()
 --AYU
 --vim.ayucolor="light-- --for light version of theme
 --vim.ayucolor="mirage----for mirage version of theme

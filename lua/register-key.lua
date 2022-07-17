@@ -7,7 +7,7 @@ local wk = require("which-key")
 wk.register({
   -- PACKER
   p = {
-    name = "packer", -- optional group name
+    name = "  Packer", -- optional group name
     s = { "<cmd>PackerSync<cr>", "PackeSync" },
     i = { "<cmd>PackerInstall<cr>", "PackerInstall" },
     u = { "<cmd>PackerUpdate<cr>", "PackerUpdate"},
@@ -17,7 +17,7 @@ wk.register({
 
   -- FILES
   f = {
-    name = "Files",
+    name = "  Files",
     f = {"<cmd>Telescope find_files<cr>", "Find files"},
     b = {"<cmd>Telescope buffers<cr>", "Find buffers"},
     h = {"<cmd>Telescope help_tags<cr>", "Help tags"},
@@ -27,7 +27,7 @@ wk.register({
 
 -- SEARCH
   s = {
-    name = "Search",
+    name = "  Search",
     w = {"<cmd>Telescope live_grep<cr>", "Search word"},
     s = {"<cmd>Telescope grep_string<cr>", "Search word cursor"},
     r = {"<cmd>Telescope registers<cr>", "Registers"},
@@ -39,13 +39,13 @@ wk.register({
 
   -- COC
   c = {
-    name = "Coc",
-    p = {"<cmd>Format<cr>", "Format"},
+    name = "  Coc",
+    f = {"<cmd>Format<cr>", "Format"},
   },
 
   -- SESSIONMANAGER
   m = {
-    name = "Session",
+    name = "  Session",
     l = {"<cmd>SessionManager load_session<cr>", "Load session"},
     r = {"<cmd>SessionManager load_last_session<cr>", "Recent session"},
     c = {"<cmd>SessionManager load_current_dir_session<cr>", "Directory session"},
@@ -55,25 +55,31 @@ wk.register({
 
 
   g = {
-    name = "Git",
-    d = {"<cmd>Gitsigns diffthis<cr>", "Git diff"},
+    name = "  Git",
+    d = {"<cmd>Gitsigns diffthis<cr>", "  Git diff"},
     n = {"<cmd>Gitsigns toggle_numhl<cr>", "Number highlight"},
     
   },
 
-  ["<leader>"] = {"<cmd>w!<cr>", "Save"},
-  q = {"<cmd>q<cr>", "quit"},
-  u = {"<cmd>UltiSnipsEdit<cr>", "Snippet"},
-  a = {"<cmd>wall<cr>", "save all"},
-  h = {"<cmd>noh<cr>", "Highlight"},
+  ["<leader>"] = {"<cmd>w!<cr>", " Save"},
+  q = {"<cmd>q<cr>", " Quit"},
+  u = {"<cmd>UltiSnipsEdit<cr>", " UltiSnips"},
+  a = {"<cmd>wall<cr>", " Save all"},
+  h = {"<cmd>noh<cr>", " Highlight"},
   
 }, { prefix = "<leader>" })
 
 
 
 wk.register({
-  w ={"<cmd>set wrap!<cr>", "toggle wrap"},
-  n ={"<cmd>set number!<cr>", "toggle number"},
-  o ={"<cmd>on<cr>", "window"},
+  w ={"<cmd>set wrap!<cr>", "Wrap"},
+  n ={"<cmd>set number!<cr>", "Number"},
+  o ={"<cmd>on<cr>", "Window"},
   z = {"<cmd>ZenMode<cr>", "ZenMode"},
 },{prefix = "s"})
+
+
+wk.register({
+  b = {name = "  Buffers"},
+},{prefix = "<space>"})
+

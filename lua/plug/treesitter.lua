@@ -1,11 +1,11 @@
-require'nvim-treesitter.configs'.setup {
+require'nvim-treesitter.configs'.setup({
   -- A list of parser names, or "all"
   ensure_installed = {"html", "javascript", "lua", "css" },
   sync_install = false,
     ignore_install = {},
     highlight = {
       enable = true,
-      additional_vim_regex_highlighting = false,
+      additional_vim_regex_highlighting = true,
     },
     context_commentstring = {
       enable = true,
@@ -21,4 +21,4 @@ require'nvim-treesitter.configs'.setup {
     autotag = { enable = true },
     incremental_selection = { enable = true },
     indent = { enable = false },
-}
+})
