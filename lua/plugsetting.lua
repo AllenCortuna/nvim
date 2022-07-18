@@ -3,8 +3,8 @@
 
 --ULTISNIPPETS
 -- Set ultisnips triggers
-vim.g["UltiSnipsExpandTrigger"] = "<tab>"
-vim.g["UltiSnipsJumpForwardTrigger"] = "<tab>" 
+-- vim.g["UltiSnipsExpandTrigger"] = "<tab>"
+-- vim.g["UltiSnipsJumpForwardTrigger"] = "<tab>" 
 -- vim.g["UltiSnipsJumpBackwardTrigger"] = "<c-z>"
 -- vim.g["UltiSnipsExpandTrigger"] = "<tab>"
 -- vim.g["UltiSnipsJumpForwardTrigger"] = "<c-b>"

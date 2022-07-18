@@ -1,5 +1,7 @@
 
 
+
+
 local impatient_ok, impatient = pcall(require, "impatient")
 if impatient_ok then impatient.enable_profile() end
 
@@ -9,7 +11,6 @@ for _, source in ipairs {
   "mapping",
   "register-key",
   "autocmd",
-  "coc",
   "plugsetting",
 } do
    local status_ok, fault = pcall(require, source)

@@ -16,6 +16,10 @@ opt.backup = no
 opt.showmode = false
 opt.scrolloff = 0 --Do not let cursor scroll below or above N number of lines when scrolling.
 
+opt.undodir= "~/.vim/backup"
+opt.undofile = true
+opt.undoreload = 10000
+
 opt.wrap = true
 
 opt.ignorecase = true -- set ignorecase
@@ -122,18 +126,13 @@ for _, provider in ipairs(default_providers) do
 end
 
 
-vim.cmd([[
-
-  " set shortmess+=c
-  " set nocompatible
-  " filetype on
-  " filetype plugin on
-  " filetype indent on
-  " syntax on
-  " set listchars=extends:>
-  set wildmode=list:longest
-  set backupdir=~/.vim/backup
-  set directory=~/.vim/tmp
-
-]])
-
+-- set shortmess+=c
+-- set nocompatible
+-- filetype on
+-- filetype plugin on
+-- filetype indent on
+-- syntax on
+-- set listchars=extends:>
+-- set wildmode=list:longest
+-- set backupdir=~/.vim/backup
+-- set directory=~/.vim/tmp

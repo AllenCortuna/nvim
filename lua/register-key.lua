@@ -10,6 +10,8 @@ wk.register({
   q = {"<cmd>q<cr>", " Quit"},
   u = {"<cmd>UltiSnipsEdit<cr>", " UltiSnips"},
   h = {"<cmd>noh<cr>", " Highlight"},
+  ["/"] = {function()
+    require("Comment.api").toggle_current_linewise() end, " Comment"},
   
   -- PACKER
   p = {
@@ -34,13 +36,11 @@ wk.register({
 -- SEARCH
   s = {
     name = "  Search",
-    w = {"<cmd>Telescope live_grep<cr>", "Search word"},
-    s = {"<cmd>Telescope grep_string<cr>", "Search word cursor"},
-    r = {"<cmd>Telescope registers<cr>", "Registers"},
-    k = {"<cmd>Maps<cr>", "Search keymap"},
-    c = {"<cmd>Colors<cr>", "Colorscheme"},
-    m = {"<cmd>Command<cr>", "Command"},
-    u = {"<cmd>Snippets<cr>", "Snippets"},
+    w = {"<cmd>Telescope live_grep<cr>", " Word"},
+    s = {"<cmd>Telescope grep_string<cr>", " Word cursor"},
+    r = {"<cmd>Telescope registers<cr>", " Registers"},
+    k = {"<cmd>WhichKey<cr>", " Keymap"},
+    c = {"<cmd>Telescope colorscheme<cr>", " Colorscheme"},
   },
 
   -- COC

@@ -12,15 +12,6 @@ return require("packer").startup(function()
     config = function() require "plug.which-key" end
   }
 
-
--- file explorer
-  use { "junegunn/fzf", 
-    cmd = "FZF"
-  }
-  use { "junegunn/fzf.vim",
-    event = "VimEnter"
-  }
-
    
 -- identline
   use { "lukas-reineke/indent-blankline.nvim",
@@ -47,7 +38,7 @@ return require("packer").startup(function()
 
  -- icons
   use { "kyazdani42/nvim-web-devicons", 
-    event="VimEnter",
+    event={"BufRead","BufNewFile"},
     config = function() require "plug.dev-icons" end
   }
 
@@ -71,16 +62,12 @@ return require("packer").startup(function()
 
   -- git
   use { "lewis6991/gitsigns.nvim",
-    event = "BufEnter",
+    cmd = "Gitsigns",
     config = function() require "plug.gitsign"  end,
   }
 
 -- snippet  
-  use { "honza/vim-snippets", event = "InsertEnter" }
-  use { "SirVer/ultisnips", event = "InsertEnter"}
 
--- completion
-  use { "neoclide/coc.nvim",branch = "release"}
 
 -- scroll
   use { "declancm/cinnamon.nvim",
@@ -137,13 +124,50 @@ return require("packer").startup(function()
   use { "marko-cerovac/material.nvim",
     config = function() require "plug.material" end,
   }
-  use({
-	  "catppuccin/nvim",
-	  as = "catppuccin",
-    opt = true
-  })
 
- 
+
+-- completion
+   use {"rafamadriz/friendly-snippets",
+      module = "cmp_nvim_lsp",
+      event = "InsertEnter",
+   }
+
+   use { "hrsh7th/nvim-cmp",
+      after = "friendly-snippets",
+      config = function()
+         require "plug.cmp"
+      end,
+   }
+
+   use {"L3MON4D3/LuaSnip",
+      wants = "friendly-snippets",
+      after = "nvim-cmp",
+      config = function()
+         require"plug.luasnip"
+      end
+   }
+
+   use {"saadparwaiz1/cmp_luasnip",
+      after = "LuaSnip",
+   }
+
+   use {"hrsh7th/cmp-nvim-lua",
+      after = "cmp_luasnip",
+   }
+
+   use {"hrsh7th/cmp-nvim-lsp",
+      after = "cmp-nvim-lua",
+   }
+
+   use {"hrsh7th/cmp-buffer",
+      after = "cmp-nvim-lsp",
+   }
+
+  use {"hrsh7th/cmp-path",
+      after = "cmp-buffer",
+   }
+
+
 end)
 
 
