@@ -9,7 +9,7 @@ return require("packer").startup(function()
 
   --key
   use {"folke/which-key.nvim", 
-    config = function() require "plug.wkey" end
+    config = function() require "plug.which-key" end
   }
 
 
@@ -18,7 +18,7 @@ return require("packer").startup(function()
     cmd = "FZF"
   }
   use { "junegunn/fzf.vim",
-    event = "BufRead"
+    event = "VimEnter"
   }
 
    
@@ -130,12 +130,18 @@ return require("packer").startup(function()
     config = function()require("zen-mode").setup {}end 
   }
 
+
   -- theme
-  use { "adrian5/oceanic-next-vim", opt = true}
+  use { "mhartington/oceanic-next", opt = true}
   use { "ghifarit53/tokyonight-vim", opt = true}
   use { "marko-cerovac/material.nvim",
     config = function() require "plug.material" end,
   }
+  use({
+	  "catppuccin/nvim",
+	  as = "catppuccin",
+    opt = true
+  })
 
  
 end)

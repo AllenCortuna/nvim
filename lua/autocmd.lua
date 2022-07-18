@@ -38,6 +38,7 @@ augroup packer_user_config
 augroup end
 
 autocmd BufNewFile * :write
+" autocmd BufNewFile,BufRead * :colorscheme material
 
 ]])
 --autocmd BufRead * :set scl=yes

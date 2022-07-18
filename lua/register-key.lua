@@ -5,6 +5,12 @@ vim.g['maplocalleader']= "@"
 local wk = require("which-key")
     -- b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
 wk.register({
+
+  ["<leader>"] = {"<cmd>w!<cr>", " Save"},
+  q = {"<cmd>q<cr>", " Quit"},
+  u = {"<cmd>UltiSnipsEdit<cr>", " UltiSnips"},
+  h = {"<cmd>noh<cr>", " Highlight"},
+  
   -- PACKER
   p = {
     name = "  Packer", -- optional group name
@@ -61,12 +67,6 @@ wk.register({
     
   },
 
-  ["<leader>"] = {"<cmd>w!<cr>", " Save"},
-  q = {"<cmd>q<cr>", " Quit"},
-  u = {"<cmd>UltiSnipsEdit<cr>", " UltiSnips"},
-  a = {"<cmd>wall<cr>", " Save all"},
-  h = {"<cmd>noh<cr>", " Highlight"},
-  
 }, { prefix = "<leader>" })
 
 
@@ -81,5 +81,6 @@ wk.register({
 
 wk.register({
   b = {name = "  Buffers"},
+  c = {name = "  Coc"},
 },{prefix = "<space>"})
 

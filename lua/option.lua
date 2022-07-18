@@ -1,55 +1,55 @@
 
-local set = vim.opt
-set.timeoutlen=300
-set.tabstop = 2 -- Set the behavior of tab
-set.expandtab = true --tab insert space
-set.compatible = false
-set.errorformat:append('%f|%l col %c|%m')
-set.cmdheight = 1
-set.updatetime = 200
-set.encoding = 'UTF-8'
-set.number = true
-set.cursorline = true
-set.shiftwidth = 2
-set.expandtab = true
-set.backup = no
-set.showmode = false
-set.scrolloff = 0 --Do not let cursor scroll below or above N number of lines when scrolling.
+local g = vim.g
 
-set.wrap = true
+local opt = vim.opt
 
-set.ignorecase = true -- set ignorecase
-set.smartcase = true --Ignore capital letters during search.
+opt.timeoutlen=300
+opt.tabstop = 2 -- Set the behavior of tab
+opt.expandtab = true --tab insert space
+opt.compatible = false
+opt.cmdheight = 1
+opt.updatetime = 200
+opt.encoding = 'UTF-8'
+opt.number = true
+opt.cursorline = true
+opt.backup = no
+opt.showmode = false
+opt.scrolloff = 0 --Do not let cursor scroll below or above N number of lines when scrolling.
 
-set.showcmd = false --Show partial command you type in the last line of the screen.
+opt.wrap = true
 
-set.showmatch = true --show match in search
+opt.ignorecase = true -- set ignorecase
+opt.smartcase = true --Ignore capital letters during search.
 
-set.hlsearch = true --Use highlighting when doing a search.
+opt.showcmd = false --Show partial command you type in the last line of the screen.
 
-set.history = 100 --Set the commands to save in history default number is 20.
+opt.showmatch = true --show match in search
 
-set.wildmenu = true --Enable auto completion menu after pressing TAB.
+opt.hlsearch = true --Use highlighting when doing a search.
 
-set.relativenumber = true
+opt.history = 100 --Set the commands to save in history default number is 20.
+
+opt.wildmenu = true --Enable auto completion menu after pressing TAB.
+
+opt.relativenumber = true
 -- set.splitright = false
-set.sidescrolloff = 20 --Number of columns to keep at the sides of the cursor 
+opt.sidescrolloff = 20 --Number of columns to keep at the sides of the cursor 
 
 --Wildmenu will ignore files with these extensions.
-set.wildignore = '*/.docx/*, */.jpg/*, */.png/*,*/.gif/*, */.pdf/*, */.pyc/*, */.exe/*, */.flv/*, */.img/*,*/.xlsx/*'
+opt.wildignore = '*/.docx/*, */.jpg/*, */.png/*,*/.gif/*, */.pdf/*, */.pyc/*, */.exe/*, */.flv/*, */.img/*,*/.xlsx/*'
 
-set.hidden = true
+opt.hidden = true
 
-set.background = 'dark'
-set.termguicolors = true
+opt.background = 'dark'
+opt.termguicolors = true
 
-set.signcolumn="number"
-set.pumheight= 10-- Height of the pop up menu 
-set.clipboard= "unnamedplus"--Connection to the system clipboard
-set.preserveindent = true -- Preserve indent structure as much as possible 
-set.lazyredraw = true -- lazily redraw screen 
-set.laststatus = 2 -- globalstatus
-set.completeopt = {"menuone", "noselect"}-- Options for insert mode completion
+opt.signcolumn="number"
+opt.pumheight= 10-- Height of the pop up menu 
+opt.clipboard= "unnamedplus"--Connection to the system clipboard
+opt.preserveindent = true -- Preserve indent structure as much as possible 
+opt.lazyredraw = true -- lazily redraw screen 
+opt.laststatus = 2 -- globalstatus
+opt.completeopt = {"menuone", "noselect"}-- Options for insert mode completion
 
 -- highlight Cursor guifg= blue guibg=blue
 -- highlight iCursor guifg=blue guibg=grey
@@ -57,28 +57,83 @@ set.completeopt = {"menuone", "noselect"}-- Options for insert mode complet
 -- set guicursor+=i:block-iCursor
 -- set guicursor+=n-v-c:blinkon0
 -- set guicursor+=i:blinkwait10
-vim.g["do_filetype_lua"] = 1 -- use filetype.lua 
-vim.g["did_load_filetypes"] = 0 -- don't use filetype.vim 
-vim.g["loaded_gzip"] = true --disable gzip
-vim.g["loaded_logipat"] = true -- disable logipat
-vim.g["loaded_matchit"] = true -- disable matchit
-vim.g["loaded_netrwFileHandlers"] = true --disable netrw
-vim.g["loaded_netrwPlugin"] = true -- disable netrw
-vim.g["loaded_netrwSettngs"]  = true -- disable netrw
-vim.g["loaded_remote_plugins"] = true --disable remote plugins
+
+g.did_load_filetypes = 0
+g.do_filetype_lua = 1
+
+opt.title = true
+
+-- Indenting
+opt.expandtab = true
+opt.shiftwidth = 2
+opt.smartindent = true
+
+opt.fillchars = { eob = " " }
+
+-- Numbers
+opt.number = true
+opt.numberwidth = 2
+opt.ruler = false
+opt.whichwrap:append "<>[]hl"
+
+-- disable some builtin vim plugins
+local default_plugins = {
+   "2html_plugin",
+   "getscript",
+   "getscriptPlugin",
+   "gzip",
+   "logipat",
+   "netrw",
+   "netrwPlugin",
+   "netrwSettings",
+   "netrwFileHandlers",
+   "matchit",
+   "tar",
+   "tarPlugin",
+   "rrhelper",
+   "spellfile_plugin",
+   "vimball",
+   "vimballPlugin",
+   "zip",
+   "zipPlugin",
+   "tutor",
+   "rplugin",
+   "syntax",
+   "synmenu",
+   "optwin",
+   "compiler",
+   "bugreport",
+   "ftplugin",
+}
+
+for _, plugin in pairs(default_plugins) do
+   g["loaded_" .. plugin] = 1
+end
+
+local default_providers = {
+   "node",
+   "python",
+   -- "perl",
+   -- "ruby",
+}
+
+for _, provider in ipairs(default_providers) do
+   vim.g["loaded_" .. provider .. "_provider"] = 0
+end
+
 
 vim.cmd([[
 
-  set shortmess+=c
-  set nocompatible
-  filetype on
-  filetype plugin on
-  filetype indent on
-  syntax on
+  " set shortmess+=c
+  " set nocompatible
+  " filetype on
+  " filetype plugin on
+  " filetype indent on
+  " syntax on
+  " set listchars=extends:>
   set wildmode=list:longest
   set backupdir=~/.vim/backup
   set directory=~/.vim/tmp
 
 ]])
--- set listchars=extends:>
 
