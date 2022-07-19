@@ -62,3 +62,4 @@ require('material').setup{
 		nvim_illuminate = true,
 	}
 }
+

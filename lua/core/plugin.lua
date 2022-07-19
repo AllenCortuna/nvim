@@ -86,9 +86,16 @@ return require("packer").startup(function()
   }
 
  -- telescope
+ use {'nvim-telescope/telescope-fzf-native.nvim', 
+   after = "telescope.nvim",
+   run = 'make',
+   config = function() require"plug.fzf" end
+ }
+    
   use { "nvim-telescope/telescope.nvim",tag = "0.1.0",
     cmd = "Telescope",
     requires = {"nvim-lua/plenary.nvim"},
+    config = function() require"plug.telescope" end
   }
 
 -- neotree
@@ -121,7 +128,6 @@ return require("packer").startup(function()
   use { "mhartington/oceanic-next", opt = true}
   use { "ghifarit53/tokyonight-vim", opt = true}
   use { "marko-cerovac/material.nvim",
-    opt = true,
     config = function() require "plug.material" end,
   }
 

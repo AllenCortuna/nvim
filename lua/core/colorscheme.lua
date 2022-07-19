@@ -13,10 +13,6 @@
 --vim.ayucolor="mirage----for mirage version of theme
 vim.g["ayucolor"]="dark" --for dark version of theme
 
---MATERIAL
--- vim.g["material_style"] = "deep ocean" 
-vim.g["material_style"] ="deep ocean"  --palenight darker oceanic 
-
 --tokyonight
 vim.g["tokyonight_style"] ="night" 
 --available: night, storm
@@ -28,5 +24,6 @@ vim.g["tokyonight_italic_keywords"] = 0
 --colorscheme material
 --colorscheme ayu
 -- colorscheme OceanicNext  
-vim.cmd "colorscheme OceanicNext"
+vim.g["material_style"] ="deep ocean"  --palenight darker oceanic 
+vim.cmd "colorscheme material"
 
