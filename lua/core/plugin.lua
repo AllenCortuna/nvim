@@ -5,6 +5,19 @@ return require("packer").startup(function()
   use "wbthomason/packer.nvim"
   use "lewis6991/impatient.nvim"
   -- use "nathom/filetype.nvim"
+  
+  use { "neovim/nvim-lspconfig",
+    config = function() require"plug.lsp-config" end
+  }
+
+  use {"williamboman/nvim-lsp-installer",
+    -- cmd = {
+    --   "LspInstallInfo",
+    --   "LspInfo",
+    -- },
+    config = function() require"plug.lsp-installer" end
+  }   
+
 
   --key
   use {"folke/which-key.nvim", 
@@ -127,7 +140,9 @@ return require("packer").startup(function()
   -- theme
   use { "mhartington/oceanic-next", opt = true}
   use { "ghifarit53/tokyonight-vim", opt = true}
+  use { "EdenEast/nightfox.nvim", }
   use { "marko-cerovac/material.nvim",
+    opt = true,
     config = function() require "plug.material" end,
   }
 

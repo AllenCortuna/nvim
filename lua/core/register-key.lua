@@ -64,8 +64,13 @@ wk.register({
     name = "  Git",
     d = {"<cmd>Gitsigns diffthis<cr>", "  Git diff"},
     n = {"<cmd>Gitsigns toggle_numhl<cr>", "Number highlight"},
-    
   },
+
+  l = {
+    name = "  Lsp",
+    i = {"<cmd>LspInfo<cr>", "LspInfo"},
+    I = {"<cmd>LspInstallInfo<cr>", "LspInstallInfo"},
+  }
 
 }, { prefix = "<leader>" })
 
