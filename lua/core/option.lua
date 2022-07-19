@@ -16,7 +16,7 @@ opt.backup = no
 opt.showmode = false
 opt.scrolloff = 0 --Do not let cursor scroll below or above N number of lines when scrolling.
 
-opt.undodir= "~/.vim/backup"
+opt.undodir= "/data/data/com.termux/files/home/backup"
 opt.undofile = true
 opt.undoreload = 10000
 
@@ -124,7 +124,6 @@ local default_providers = {
 for _, provider in ipairs(default_providers) do
    vim.g["loaded_" .. provider .. "_provider"] = 0
 end
-
 
 -- set shortmess+=c
 -- set nocompatible

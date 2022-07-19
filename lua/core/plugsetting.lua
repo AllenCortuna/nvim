@@ -27,5 +27,6 @@ vim.g["tokyonight_italic_keywords"] = 0
 
 --colorscheme material
 --colorscheme ayu
--- colorscheme oceanicnext  
-vim.cmd "colorscheme material"
+-- colorscheme OceanicNext  
+vim.cmd "colorscheme OceanicNext"
+

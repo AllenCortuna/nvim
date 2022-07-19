@@ -20,7 +20,7 @@ wk.register({
     i = { "<cmd>PackerInstall<cr>", "PackerInstall" },
     u = { "<cmd>PackerUpdate<cr>", "PackerUpdate"},
     c = { "<cmd>PackerClean<cr>", "PackerClean" },
-    f = { "<cmd>PackerStatus<cr>", "PackerStatus"}
+    S = { "<cmd>PackerStatus<cr>", "PackerStatus"}
   },
 
   -- FILES

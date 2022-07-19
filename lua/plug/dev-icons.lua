@@ -9,7 +9,13 @@ require'nvim-web-devicons'.setup {
     color = "#428850",
     cterm_color = "65",
     name = "Zsh"
-  }
+  },
+  js = {
+    icon = "",
+    color = "#FFF100",
+    cterm_color = "65",
+    name = "Javascript"    
+  },
  };
  -- globally enable default icons (default to false)
  -- will get overriden by `get_icons` option

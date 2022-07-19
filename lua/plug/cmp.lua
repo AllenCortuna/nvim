@@ -2,10 +2,11 @@
   local cmp = require "cmp"
   local luasnip = require "luasnip"
 
+
 local kind_icons = {
-  Text = "",
+  Text = "",  --
   Method = "",
-  Function = "",
+  Function = "",   --
   Constructor = "",
   Field = "ﰠ",
   Variable = "",
@@ -25,7 +26,7 @@ local kind_icons = {
   EnumMember = "",
   Constant = "",
   Struct = "פּ",
-  Event = "",
+  Event = "",  --
   Operator = "",
   TypeParameter = "",
 }
@@ -91,12 +92,31 @@ mapping = {
     }),
   },
 
+    duplicates = {
+      nvim_lsp = 1,
+      luasnip = 1,
+      cmp_tabnine = 1,
+      buffer = 1,
+      path = 1,
+    },
+
+
+   -- TODO: fix
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'luasnip' }, 
-    }, {
-      { name = 'buffer' },
+      { name = 'luasnip' },   
+      { name = 'path'},
+      { name = 'buffer',
+        option ={
+          keyword_length = 1,
+          get_bufnrs = function()
+              return vim.api.nvim_list_bufs()
+            end
+        },
+      },
     })
+
+
   })
 
   -- Set configuration for specific filetype.
@@ -125,6 +145,7 @@ mapping = {
       { name = 'cmdline' }
     })
   })
+
 
   -- Setup lspconfig.
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())

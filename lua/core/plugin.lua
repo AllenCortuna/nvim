@@ -1,5 +1,4 @@
 vim.cmd [[packadd packer.nvim]]
- 
   -- use { "Shatur/neovim-session-manager",}
   
 return require("packer").startup(function()
@@ -21,19 +20,19 @@ return require("packer").startup(function()
 
 -- syntax high
   use { "nvim-treesitter/nvim-treesitter",
-     run = ":TSUpdate",
- --     event = "BufWinEnter",
- --     cmd = {
- --       "TSInstall",
- --       "TSInstallInfo",
- --       "TSInstallSync",
- --       "TSUninstall",
- --       "TSUpdate",
- --       "TSUpdateSync",
- --       "TSDisableAll",
- --       "TSEnableAll",
- --     },
-     config = function() require "plug.treesitter" end
+    run = ":TSUpdate",
+    event={"BufRead","BufNewFile"},
+    cmd = {
+      "TSInstall",
+      "TSInstallInfo",
+      "TSInstallSync",
+      "TSUninstall",
+      "TSUpdate",
+      "TSUpdateSync",
+      "TSDisableAll",
+      "TSEnableAll",
+    },
+    config = function() require "plug.treesitter" end
    }
 
  -- icons
@@ -66,7 +65,6 @@ return require("packer").startup(function()
     config = function() require "plug.gitsign"  end,
   }
 
--- snippet  
 
 
 -- scroll
@@ -107,6 +105,7 @@ return require("packer").startup(function()
   -- comment
   use { "numToStr/Comment.nvim", 
     keys = {"gc"},
+    event = {"BufRead", "BufNewFile"},
     config = function() require("Comment").setup()end 
   }
 
@@ -122,13 +121,13 @@ return require("packer").startup(function()
   use { "mhartington/oceanic-next", opt = true}
   use { "ghifarit53/tokyonight-vim", opt = true}
   use { "marko-cerovac/material.nvim",
+    opt = true,
     config = function() require "plug.material" end,
   }
 
 
 -- completion
    use {"rafamadriz/friendly-snippets",
-      module = "cmp_nvim_lsp",
       event = "InsertEnter",
    }
 
@@ -139,6 +138,7 @@ return require("packer").startup(function()
       end,
    }
 
+-- snippet  
    use {"L3MON4D3/LuaSnip",
       wants = "friendly-snippets",
       after = "nvim-cmp",
@@ -163,7 +163,7 @@ return require("packer").startup(function()
       after = "cmp-nvim-lsp",
    }
 
-  use {"hrsh7th/cmp-path",
+   use {"hrsh7th/cmp-path",
       after = "cmp-buffer",
    }
 
