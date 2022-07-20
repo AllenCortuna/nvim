@@ -4,7 +4,7 @@
 
 
 local kind_icons = {
-  Text = "",  --
+  Text = "",  --
   Method = "",
   Function = "",   --
   Constructor = "",
@@ -92,20 +92,9 @@ mapping = {
     }),
   },
 
-    duplicates = {
-      nvim_lsp = 1,
-      luasnip = 1,
-      cmp_tabnine = 1,
-      buffer = 1,
-      path = 1,
-    },
-
-
    -- TODO: fix
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'luasnip' },   
-      { name = 'path'},
       { name = 'buffer',
         option ={
           keyword_length = 1,
@@ -114,6 +103,8 @@ mapping = {
             end
         },
       },
+      { name = 'luasnip'},   
+      { name = 'path'},
     })
 
 
@@ -153,6 +144,6 @@ mapping = {
   -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
     -- capabilities = capabilities
   -- }
-  require('lspconfig')['tailwindcss'].setup {
-    capabilities = capabilities
-  }
+  -- require('lspconfig')['tailwindcss'].setup {
+  --   capabilities = capabilities
+  -- }

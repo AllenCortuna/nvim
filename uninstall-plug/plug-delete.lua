@@ -6,9 +6,27 @@
   use { "pangloss/vim-javascript" ,ft={"javascript"}}
 
 
-  -- lsp
+
+  use { "neovim/nvim-lspconfig",
+    config = function() require"plug.lsp-config" end
+  }
+  use {"williamboman/nvim-lsp-installer",
+    config = function() require"plug.lsp-installer" end
+  }   
+
+
+-- highlight portion
   use {
-      "williamboman/nvim-lsp-installer",
-      "neovim/nvim-lspconfig",
+    "folke/twilight.nvim",
+    cmd = "TwilightEnable",
+    config = function() require "plug.twilight" end
+  }
+
+  -- todo
+  use {
+    "folke/todo-comments.nvim",
+    event = {"BufRead", "BufNewFile"},
+    requires = "nvim-lua/plenary.nvim",
+    config = function() require("todo-comments").setup { } end
   }
 

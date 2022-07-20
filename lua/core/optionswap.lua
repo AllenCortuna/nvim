@@ -51,7 +51,6 @@ opt.updatetime = 250
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
 
-g.mapleader = " "
 
 -- disable some builtin vim plugins
 local default_plugins = {
@@ -95,7 +94,7 @@ local default_providers = {
 }
 
 for _, provider in ipairs(default_providers) do
-   vim.g["loaded_" .. provider .. "_provider"] = 0
+   vim.g["loaded_" .. provider .. "_provider"] = 1
 end
 
 -- set shada path

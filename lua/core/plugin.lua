@@ -6,21 +6,10 @@ return require("packer").startup(function()
   use "lewis6991/impatient.nvim"
   -- use "nathom/filetype.nvim"
   
-  use { "neovim/nvim-lspconfig",
-    config = function() require"plug.lsp-config" end
-  }
-
-  use {"williamboman/nvim-lsp-installer",
-    -- cmd = {
-    --   "LspInstallInfo",
-    --   "LspInfo",
-    -- },
-    config = function() require"plug.lsp-installer" end
-  }   
-
 
   --key
   use {"folke/which-key.nvim", 
+    opt = true,
     config = function() require "plug.which-key" end
   }
 
@@ -137,16 +126,6 @@ return require("packer").startup(function()
   }
 
 
-  -- theme
-  use { "mhartington/oceanic-next", opt = true}
-  use { "ghifarit53/tokyonight-vim", opt = true}
-  use { "EdenEast/nightfox.nvim", }
-  use { "marko-cerovac/material.nvim",
-    opt = true,
-    config = function() require "plug.material" end,
-  }
-
-
 -- completion
    use {"rafamadriz/friendly-snippets",
       event = "InsertEnter",
@@ -187,6 +166,16 @@ return require("packer").startup(function()
    use {"hrsh7th/cmp-path",
       after = "cmp-buffer",
    }
+
+  -- theme
+  use { "mhartington/oceanic-next", opt = true}
+  use { "ghifarit53/tokyonight-vim" }
+  use { "EdenEast/nightfox.nvim", opt = true }
+  use { "marko-cerovac/material.nvim",
+    -- opt = true,
+    config = function() require "plug.material" end,
+  }
+
 
 
 end)

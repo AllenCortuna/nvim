@@ -114,24 +114,15 @@ for _, plugin in pairs(default_plugins) do
    g["loaded_" .. plugin] = 1
 end
 
+
 local default_providers = {
    "node",
    "python",
-   -- "perl",
-   -- "ruby",
+   "perl",
+   "ruby",
 }
 
 for _, provider in ipairs(default_providers) do
    vim.g["loaded_" .. provider .. "_provider"] = 0
 end
 
--- set shortmess+=c
--- set nocompatible
--- filetype on
--- filetype plugin on
--- filetype indent on
--- syntax on
--- set listchars=extends:>
--- set wildmode=list:longest
--- set backupdir=~/.vim/backup
--- set directory=~/.vim/tmp
