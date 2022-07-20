@@ -7,14 +7,14 @@ local wk = require("which-key")
 wk.register({
 
 
-  ["<leader>"] = {"<cmd>w!<cr>", " Save"},
+  ["<leader>"] = {"<cmd>w!<cr>", "  Save"},
   z = {"<cmd>Telescope find_files<cr>", "  Find files"},
   a = {"<cmd>Neotree toggle <cr>", "  Neotree"},
   r = {":%s///gc<left><left><left>", "  Rename" },
-  q = {"<cmd>q<cr>", " Quit"},
-  h = {"<cmd>noh<cr>", " Highlight"},
+  q = {"<cmd>q<cr>", "  Quit"},
+  h = {"<cmd>noh<cr>", "  Highlight"},
   ["/"] = {function()
-    require("Comment.api").toggle_current_linewise() end, " Comment"},
+    require("Comment.api").toggle_current_linewise() end, "  Comment"},
 
 
   b = {name = "  Buffers"},
@@ -31,22 +31,22 @@ wk.register({
   -- FILES
   f = {
     name = "  Files",
-    f = {"<cmd>Telescope find_files<cr>", "  Find files"},
+    f = {"<cmd>Telescope find_files<cr>", "  Find files"},
     b = {"<cmd>Telescope buffers<cr>", "  Find buffers"},
     h = {"<cmd>Telescope help_tags<cr>", "  Help tags"},
-    r = {"<cmd>Telescope oldfiles<cr>", "  Recent files"},
+    r = {"<cmd>Telescope oldfiles<cr>", "  Recent files"},
     t = {"<cmp>TodoLocList<cr>", "  TodoLocList"}
 
   },
 
 -- SEARCH
   s = {
-    name = "  Search",
-    w = {"<cmd>Telescope live_grep<cr>", " Word"},
-    s = {"<cmd>Telescope grep_string<cr>", " Word cursor"},
-    r = {"<cmd>Telescope registers<cr>", " Registers"},
-    k = {"<cmd>WhichKey<cr>", " Keymap"},
-    c = {"<cmd>Telescope colorscheme<cr>", " Colorscheme"},
+    name = "  Search",
+    w = {"<cmd>Telescope live_grep<cr>", "  Word"},
+    s = {"<cmd>Telescope grep_string<cr>", "  Word cursor"},
+    r = {"<cmd>Telescope registers<cr>", "  Registers"},
+    k = {"<cmd>WhichKey<cr>", "  Keymap"},
+    c = {"<cmd>Telescope colorscheme<cr>", "  Colorscheme"},
   },
 
   -- COC
@@ -57,9 +57,9 @@ wk.register({
 
   -- SESSIONMANAGER
   m = {
-    name = "  Session",
-    l = {"<cmd>SessionManager load_session<cr>", "  Load session"},
-    r = {"<cmd>SessionManager load_last_session<cr>", "Recent session"},
+    name = "  Session",
+    l = {"<cmd>SessionManager load_session<cr>", "  Load session"},
+    r = {"<cmd>SessionManager load_last_session<cr>", "  Recent session"},
     c = {"<cmd>SessionManager load_current_dir_session<cr>", "Directory session"},
     k = {"<cmd>mks!<cr>", "Save"},
     d = {"<cmd>SessionManager delete_session<cr>", "Delete session"},
@@ -91,6 +91,4 @@ wk.register({
 },{prefix = "s"})
 
 
--- wk.register({
--- },{prefix = "_"})
 

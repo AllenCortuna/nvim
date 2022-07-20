@@ -14,7 +14,7 @@
 vim.g["ayucolor"]="dark" --for dark version of theme
 
 --tokyonight
-vim.g["tokyonight_style"] ="night" 
+vim.g["tokyonight_style"] ="storm" 
 --available: night, storm
 vim.g["tokyonight_enable_italic"] = 0
 vim.g["tokyonight_italic_functions"] = 0
@@ -25,5 +25,5 @@ vim.g["tokyonight_italic_keywords"] = 0
 --colorscheme ayu
 -- colorscheme OceanicNext  
 vim.g["material_style"] ="deep ocean"  --palenight darker oceanic 
+-- vim.cmd"colorscheme tokyonight"
 vim.cmd"colorscheme material"
--- vim.cmd"colorscheme OceanicNext"

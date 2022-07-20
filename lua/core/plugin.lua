@@ -6,6 +6,13 @@ return require("packer").startup(function()
   use "lewis6991/impatient.nvim"
   -- use "nathom/filetype.nvim"
   
+  -- theme
+  use { "mhartington/oceanic-next", opt = true }
+  use { "ghifarit53/tokyonight-vim", opt = true }
+  use { "marko-cerovac/material.nvim",
+    config = function() require "plug.material" end,
+  }
+
 
   --key
   use {"folke/which-key.nvim", 
@@ -171,18 +178,6 @@ return require("packer").startup(function()
       after = "cmp-buffer",
    }
 
+  use {"tweekmonster/startuptime.vim"}
 
-  -- theme
-  use { "mhartington/oceanic-next", opt = true}
-  use { "ghifarit53/tokyonight-vim" }
-  use { "EdenEast/nightfox.nvim", opt = true }
-  use { "marko-cerovac/material.nvim",
-    -- opt = true,
-    config = function() require "plug.material" end,
-  }
-
-
-
-end)
-
-
+end) 

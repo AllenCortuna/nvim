@@ -5,14 +5,14 @@
 
 local kind_icons = {
   Text = "",  --
-  Method = "",
+  Method = "",  --
   Function = "",   --
   Constructor = "",
-  Field = "ﰠ",
+  Field = "",
   Variable = "",
-  Class = "",
-  Interface = "",
-  Module = "",
+  Class = "", --
+  Interface = "", --
+  Module = "",  --
   Property = "",
   Unit = "",
   Value = "",
