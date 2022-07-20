@@ -9,7 +9,6 @@ return require("packer").startup(function()
 
   --key
   use {"folke/which-key.nvim", 
-    opt = true,
     config = function() require "plug.which-key" end
   }
 
@@ -154,6 +153,11 @@ return require("packer").startup(function()
    use {"hrsh7th/cmp-nvim-lua",
       after = "cmp_luasnip",
    }
+   
+   use {"hrsh7th/cmp-cmdline",
+      after = "cmp-buffer"
+   }
+
 
    use {"hrsh7th/cmp-nvim-lsp",
       after = "cmp-nvim-lua",
@@ -166,6 +170,7 @@ return require("packer").startup(function()
    use {"hrsh7th/cmp-path",
       after = "cmp-buffer",
    }
+
 
   -- theme
   use { "mhartington/oceanic-next", opt = true}

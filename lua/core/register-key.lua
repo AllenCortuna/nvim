@@ -8,8 +8,9 @@ wk.register({
 
 
   ["<leader>"] = {"<cmd>w!<cr>", " Save"},
+  z = {"<cmd>Telescope find_files<cr>", "  Find files"},
   a = {"<cmd>Neotree toggle <cr>", "  Neotree"},
-  r = {"<cmd>%s///gc<left><left><left>", "  Rename" },
+  r = {":%s///gc<left><left><left>", "  Rename" },
   q = {"<cmd>q<cr>", " Quit"},
   h = {"<cmd>noh<cr>", " Highlight"},
   ["/"] = {function()

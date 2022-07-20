@@ -5,6 +5,12 @@ vim.cmd([[
 
 autocmd ExitPre * :write
 
+"plugin
+augroup packer_user_config
+  autocmd!
+  autocmd BufWritePost plugin.lua source <afile> | PackerCompile
+augroup end
+
 " augroup filetype_vim
 "     autocmd!
 "     autocmd FileType vim setlocal foldmethod=marker
@@ -24,11 +30,6 @@ autocmd ExitPre * :write
 
 
 
-"plugin
-augroup packer_user_config
-  autocmd!
-  autocmd BufWritePost plugin.lua source <afile> | PackerCompile
-augroup end
 
 " autocmd BufNewFile * :write
 " autocmd BufNewFile,BufRead * :colorscheme material

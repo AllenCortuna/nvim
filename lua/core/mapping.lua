@@ -21,10 +21,10 @@ nmap("n", "<c-down>","<c-w>-", log)
 nmap("n", "<c-left>","<c-w>>", log) 
 nmap("n", "<c-right>","<c-w><", log) 
 
-nmap("n", "hh","<esc>", log) 
-nmap("n", "hj","<esc>", log) 
-nmap("n", "jj","<esc>", log) 
-nmap("n", "jh","<esc>", log) 
+nmap("i", "hh","<esc>", log) 
+nmap("i", "hj","<esc>", log) 
+nmap("i", "jj","<esc>", log) 
+nmap("i", "jh","<esc>", log) 
 
 
 nmap("n", "<c-z>","<cmd>wall<cr>", log)
