@@ -1,0 +1,62 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.023  000.023: --- NVIM STARTING ---
+000.931  000.907: locale set
+002.619  001.688: inits 1
+002.687  000.068: window checked
+002.704  000.018: parsing arguments
+025.112  022.408: init lua interpreter
+025.909  000.796: expanding arguments
+026.089  000.181: inits 2
+028.851  002.761: init highlight
+028.866  000.015: waiting for UI
+034.416  005.551: done waiting for UI
+034.465  000.049: init screen for UI
+034.594  000.129: init default mappings
+034.789  000.195: init default autocommands
+041.653  000.372  000.372: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/ftplugin.vim
+042.540  000.277  000.277: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/indent.vim
+042.981  000.225  000.225: sourcing $VIM/sysinit.vim
+087.492  044.361  044.361: sourcing /data/data/com.termux/files/home/.config/nvim/init.lua
+087.560  007.536: sourcing vimrc file(s)
+095.554  002.227  002.227: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.lua
+095.865  000.124  000.124: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.vim
+097.519  000.676  000.676: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/synload.vim
+098.150  002.131  001.456: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/syntax.vim
+110.843  006.061  006.061: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/fzf.vim
+111.147  000.127  000.127: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/gzip.vim
+111.358  000.089  000.089: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/health.vim
+111.718  000.249  000.249: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/man.vim
+111.925  000.101  000.101: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchit.vim
+113.419  001.390  001.390: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchparen.vim
+113.682  000.148  000.148: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/netrwPlugin.vim
+115.003  000.096  000.096: sourcing /data/data/com.termux/files/home/.local/share/nvim/rplugin.vim
+115.072  001.285  001.189: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/rplugin.vim
+115.721  000.531  000.531: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/shada.vim
+115.961  000.091  000.091: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/spellfile.vim
+116.343  000.241  000.241: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tarPlugin.vim
+116.632  000.112  000.112: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tohtml.vim
+116.944  000.165  000.165: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tutor.vim
+117.259  000.176  000.176: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/zipPlugin.vim
+139.422  010.846  010.846: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/material.nvim/colors/material.vim
+141.744  023.848  013.002: sourcing /data/data/com.termux/files/home/.config/nvim/plugin/packer_compiled.lua
+144.372  017.715: loading rtp plugins
+147.675  000.259  000.259: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+149.038  000.093  000.093: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/which-key.nvim/plugin/which-key.vim
+150.873  006.148: loading packages
+150.896  000.023: loading after plugins
+150.987  000.092: inits 3
+199.395  048.408: reading ShaDa
+199.576  000.180: opening buffers
+199.589  000.013: BufEnter autocommands
+199.605  000.016: editing files in windows
+244.336  044.731: VimEnter autocommands
+244.364  000.028: UIEnter autocommands
+247.812  002.658  002.658: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/autoload/provider/clipboard.vim
+247.889  000.867: before starting main loop
+249.781  001.892: first screen update
+249.801  000.021: --- NVIM STARTED ---

@@ -1,0 +1,54 @@
+{
+"exportType": {
+    "body": ["export type ${1:first} = {${2:second}}"],
+    "prefix": "exptp"
+  },
+  "exportInterface": {
+    "prefix": "expint",
+    "body": ["export interface ${1:first} {${2:second}}"]
+  },
+  "typescriptReactClassComponent": {
+    "prefix": "tsrcc",
+    "description": "Creates a React component class with ES7 module system and TypeScript interfaces",
+    "body": [
+      "import React, { Component } from 'react'",
+      "",
+      "type Props = {}",
+      "",
+      "type State = {}",
+      "",
+      "export default class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {",
+      "  state = {}",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>${1:first}</div>",
+      "    )",
+      "  }",
+      "}"
+    ]
+  },
+  "typescriptReactClassExportComponent": {
+    "prefix": "tsrce",
+    "body": [
+      "import React, { Component } from 'react'",
+      "",
+      "type Props = {}",
+      "",
+      "type State = {}",
+      "",
+      "class ${1:${TM_FILENAME_BASE}} extends Component<Props, State> {",
+      "  state = {}",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>${1:first}</div>",
+      "    )",
+      "  }",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates a React component class with ES7 module system and TypeScript interfaces"
+  }
+}

@@ -1,1 +1,1 @@
-require("galaxyline.themes.custom")
+require("galaxyline.themes.galaxy")

@@ -32,6 +32,7 @@
   "suggest.floatEnable": true,
   "diagnostic.messageTarget": "float",
   "signature.target": "float",
-  "suggest.noselect": false
+  "suggest.noselect": false,
+  "coc_suggest_disable" : true
 }
  

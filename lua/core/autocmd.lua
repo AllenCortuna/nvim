@@ -11,6 +11,7 @@ augroup packer_user_config
   autocmd BufWritePost plugin.lua source <afile> | PackerCompile
 augroup end
 
+
 " augroup filetype_vim
 "     autocmd!
 "     autocmd FileType vim setlocal foldmethod=marker
