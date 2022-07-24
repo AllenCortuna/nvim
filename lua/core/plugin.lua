@@ -131,14 +131,6 @@ return require("packer").startup(function()
 
 	-- telescope
 	use({
-		"nvim-telescope/telescope-fzf-native.nvim",
-		after = "telescope.nvim",
-		run = "make",
-		config = function()
-			require("plug.fzf")
-		end,
-	})
-	use({
 		"benfowler/telescope-luasnip.nvim",
 		module = "telescope._extensions.luasnip", -- if you wish to lazy-load
 		config = function()
