@@ -1,7 +1,7 @@
-#NVIM CONFIG
+# NVIM CONFIG
 Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 
-#####Requirements
+##### Requirements
 -clang
 -nodejs
 -stylua
@@ -11,7 +11,7 @@ Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 
 **NOTE:** neovim version must be >= 0.7 
 
-#####Installation
+##### Installation
 **NOTE:** if your dont have the require package paste this
 ```sh
 apt update && apt upgrade
@@ -20,7 +20,7 @@ apt update && apt upgrade
 pkg install clang nodejs stylua prettier git
 ```
 
-###Install Neovim
+### Install Neovim
 **NOTE:** must be on the .config dir
 ```sh 
 git clone https://github.com/AllenCortuna/nvim
