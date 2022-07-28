@@ -11,7 +11,8 @@ return require("packer").startup(function()
 		opt = true,
 	})
 	use({
-		"ghifarit53/tokyonight-vim", opt = true,
+		"ghifarit53/tokyonight-vim",
+		opt = true,
 		config = function()
 			require("theme.tokyonight")
 		end,
@@ -26,12 +27,22 @@ return require("packer").startup(function()
 	-- icons
 	use({
 		"kyazdani42/nvim-web-devicons",
-		event = { "BufRead", "BufNewFile","CmdwinEnter" },
+		event = { "BufRead", "BufNewFile", "CmdwinEnter" },
 		config = function()
 			require("plug.dev-icons")
 		end,
 	})
 
+	--todo
+	use({
+		"AmeerTaweel/todo.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo").setup({})
+		end,
+	})
+
+	-- session
 	use({
 		"Shatur/neovim-session-manager",
 		config = function()
@@ -105,7 +116,7 @@ return require("packer").startup(function()
 	-- git
 	use({
 		"lewis6991/gitsigns.nvim",
-    event = {"BufRead", "BufNewFile"},
+		event = { "BufRead", "BufNewFile" },
 		-- cmd = "Gitsigns",
 		config = function()
 			require("plug.gitsign")
