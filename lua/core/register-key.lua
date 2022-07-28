@@ -5,7 +5,7 @@ local wk = require("which-key")
 wk.register({
 
 	["<leader>"] = { "<cmd>w!<cr>", "  Save" },
-	z = { "<cmd>Telescope find_files<cr>", "  Find files" },
+	-- t = { "<cmd>Telescope find_files<cr>", "  Find files" },
 	a = { "<cmd>Neotree toggle <cr>", "  Neotree" },
 	r = { ":%s///gc<left><left><left>", "  Rename" },
 	q = { "<cmd>q<cr>", "  Quit" },
@@ -62,9 +62,9 @@ wk.register({
 		name = "  Session",
 		l = { "<cmd>SessionManager load_session<cr>", "  Load session" },
 		r = { "<cmd>SessionManager load_last_session<cr>", "  Recent session" },
-		c = { "<cmd>SessionManager load_current_dir_session<cr>", "Directory session" },
-		k = { "<cmd>mks!<cr>", "Save" },
-		d = { "<cmd>SessionManager delete_session<cr>", "Delete session" },
+		c = { "<cmd>SessionManager load_current_dir_session<cr>", "  Directory session" },
+		k = { "<cmd>SessionManager save_current_session<cr>", "  Save" },
+		d = { "<cmd>SessionManager delete_session<cr>", "  Delete session" },
 	},
 
 	g = {
@@ -96,5 +96,5 @@ wk.register({
 		end,
 		"  Format Lua",
 	},
-	j = { "<cmd>Prettier <cr>", "  Format Js" },
+	j = { "<cmd>Prettier <cr>", "  Format Js/Css/Html" },
 }, { prefix = 'f'})

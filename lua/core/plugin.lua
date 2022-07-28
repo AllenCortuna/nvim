@@ -6,12 +6,29 @@ return require("packer").startup(function()
 	-- use 'nathom/filetype.nvim'
 
 	-- theme
-	use({ "mhartington/oceanic-next", opt = true })
-	use({ "ghifarit53/tokyonight-vim", opt = true })
+	use({
+		"mhartington/oceanic-next",
+		opt = true,
+	})
+	use({
+		"ghifarit53/tokyonight-vim", opt = true,
+		config = function()
+			require("theme.tokyonight")
+		end,
+	})
 	use({
 		"marko-cerovac/material.nvim",
 		config = function()
 			require("theme.material")
+		end,
+	})
+
+	-- icons
+	use({
+		"kyazdani42/nvim-web-devicons",
+		event = { "BufRead", "BufNewFile" },
+		config = function()
+			require("plug.dev-icons")
 		end,
 	})
 
@@ -55,14 +72,6 @@ return require("packer").startup(function()
 		},
 		config = function()
 			require("plug.treesitter")
-		end,
-	})
-	-- icons
-	use({
-		"kyazdani42/nvim-web-devicons",
-		event = { "BufRead", "BufNewFile" },
-		config = function()
-			require("plug.dev-icons")
 		end,
 	})
 
