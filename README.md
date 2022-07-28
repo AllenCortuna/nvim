@@ -2,12 +2,12 @@
 Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 
 ##### Requirements
--clang
--nodejs
--stylua
--prettier
--git
--packer
+- clang
+- nodejs
+- stylua
+- prettier
+- git
+- packer
 
 **NOTE:** neovim version must be >= 0.7 
 
