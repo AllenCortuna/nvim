@@ -26,7 +26,7 @@ return require("packer").startup(function()
 	-- icons
 	use({
 		"kyazdani42/nvim-web-devicons",
-		event = { "BufRead", "BufNewFile" },
+		event = { "BufRead", "BufNewFile","CmdwinEnter" },
 		config = function()
 			require("plug.dev-icons")
 		end,
@@ -105,7 +105,8 @@ return require("packer").startup(function()
 	-- git
 	use({
 		"lewis6991/gitsigns.nvim",
-		cmd = "Gitsigns",
+    event = {"BufRead", "BufNewFile"},
+		-- cmd = "Gitsigns",
 		config = function()
 			require("plug.gitsign")
 		end,

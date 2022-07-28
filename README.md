@@ -17,7 +17,10 @@ Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 apt update && apt upgrade
 ```
 ```sh 
-pkg install clang nodejs stylua prettier git
+pkg install clang nodejs stylua git fzf ripgrep lazygit fish 
+```
+```sh 
+npm i -g prettier
 ```
 
 ### Install Neovim
