@@ -17,7 +17,13 @@ Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 apt update && apt upgrade
 ```
 ```sh 
-pkg install clang nodejs stylua git fzf ripgrep lazygit fish 
+pkg install clang nodejs stylua git fzf ripgrep lazygit fish neovim ncdu gh 
+```
+```sh
+# with git
+$ git clone https://github.com/oh-my-fish/oh-my-fish
+$ cd oh-my-fish
+$ bin/install --offline
 ```
 ```sh 
 npm i -g prettier
