@@ -37,8 +37,9 @@ return require("packer").startup(function()
 	use({
 		"AmeerTaweel/todo.nvim",
 		requires = "nvim-lua/plenary.nvim",
+		event = { "BufRead", "BufNewFile" },
 		config = function()
-			require("todo").setup({})
+			require("plug.todo")
 		end,
 	})
 

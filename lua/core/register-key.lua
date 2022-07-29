@@ -36,7 +36,7 @@ wk.register({
 		b = { "<cmd>Telescope buffers<cr>", "  Find buffers" },
 		h = { "<cmd>Telescope help_tags<cr>", "  Help tags" },
 		r = { "<cmd>Telescope oldfiles<cr>", "  Recent files" },
-		t = { "<cmp>TodoLocList<cr>", "  TodoLocList" },
+		t = { "<cmd>TODOTelescope<cr>", "  TODOTelescope" },
 	},
 
 	-- SEARCH
@@ -47,7 +47,8 @@ wk.register({
 		r = { "<cmd>Telescope registers<cr>", "  Registers" },
 		k = { "<cmd>WhichKey<cr>", "  Keymap" },
 		c = { "<cmd>Telescope colorscheme<cr>", "  Colorscheme" },
-    l = {"<cmd> Telescope luasnip <cr>" , "  Snippet"}
+    l = {"<cmd> Telescope luasnip <cr>" , "  Snippet"},
+    t = {"<cmd>TODOQuickfixList<cr>", "  TODOQuickfixList"}
 	},
 
 	-- COC
