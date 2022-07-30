@@ -1,7 +1,7 @@
 # NVIM CONFIG
 Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 
-##### Requirements
+##### Packages 
 - clang
 - nodejs
 - stylua
@@ -11,25 +11,34 @@ Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 
 **NOTE:** neovim version must be >= 0.7 
 
-##### Installation
+#### Installation
+##### Termux pkg
 **NOTE:** if your dont have the require package paste this
 ```sh
 apt update && apt upgrade
 ```
 ```sh 
-pkg install clang nodejs stylua git fzf ripgrep lazygit fish neovim ncdu gh 
+pkg install clang nodejs stylua git fzf ripgrep lazygit fish neovim ncdu gh tmux
+```
+
+
+##### oh-my-fish
+```sh
+git clone https://github.com/oh-my-fish/oh-my-fish
 ```
 ```sh
-# with git
-$ git clone https://github.com/oh-my-fish/oh-my-fish
-$ cd oh-my-fish
-$ bin/install --offline
+cd oh-my-fish
 ```
+```sh
+bin/install --offline
+```
+
+##### Code Formater
 ```sh 
 npm i -g prettier
 ```
 
-### Install Neovim
+#### Install Neovim
 **NOTE:** must be on the .config dir
 ```sh 
 git clone https://github.com/AllenCortuna/nvim
