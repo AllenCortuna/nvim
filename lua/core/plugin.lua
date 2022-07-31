@@ -3,7 +3,6 @@ vim.cmd([[packadd packer.nvim]])
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("lewis6991/impatient.nvim")
-	-- use 'nathom/filetype.nvim'
 
 	-- theme
 	use({
@@ -27,29 +26,21 @@ return require("packer").startup(function()
 	-- icons
 	use({
 		"kyazdani42/nvim-web-devicons",
-		event = { "BufRead", "BufNewFile", "CmdwinEnter" },
-		config = function()
-			require("plug.dev-icons")
-		end,
-	})
-
-	--todo
-	use({
-		"AmeerTaweel/todo.nvim",
-		requires = "nvim-lua/plenary.nvim",
 		event = { "BufRead", "BufNewFile" },
 		config = function()
-			require("plug.todo")
+			require("plug.dev-icons")
 		end,
 	})
 
 	-- session
 	use({
 		"Shatur/neovim-session-manager",
+    cmd = "SessionManager",
 		config = function()
 			require("plug.session")
 		end,
 	})
+
 	--key
 	use({
 		"folke/which-key.nvim",
@@ -158,6 +149,7 @@ return require("packer").startup(function()
 		config = function()
 			require("telescope").load_extension("luasnip")
 		end,
+		after = "telescope.nvim",
 	})
 
 	use({
@@ -176,8 +168,8 @@ return require("packer").startup(function()
 		branch = "v2.x",
 		cmd = "Neotree",
 		requires = {
-			"nvim-lua/plenary.nvim",
 			"kyazdani42/nvim-web-devicons",
+			"nvim-lua/plenary.nvim",
 			"MunifTanjim/nui.nvim",
 		},
 		config = function()
@@ -192,15 +184,6 @@ return require("packer").startup(function()
 		event = { "BufRead", "BufNewFile" },
 		config = function()
 			require("Comment").setup()
-		end,
-	})
-
-	-- zenmode
-	use({
-		"folke/zen-mode.nvim",
-		cmd = "ZenMode",
-		config = function()
-			require("zen-mode").setup({})
 		end,
 	})
 

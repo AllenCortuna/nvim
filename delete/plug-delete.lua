@@ -44,3 +44,23 @@ use({
 		require("plug.notify")
 	end,
 })
+
+
+	--todo
+	use({
+		"AmeerTaweel/todo.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		event = { "BufRead", "BufNewFile" },
+		config = function()
+			require("plug.todo")
+		end,
+	})
+
+	-- zenmode
+	use({
+		"folke/zen-mode.nvim",
+		cmd = "ZenMode",
+		config = function()
+			require("zen-mode").setup({})
+		end,
+	})

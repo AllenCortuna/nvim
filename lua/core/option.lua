@@ -1,7 +1,7 @@
 local g = vim.g
 local opt = vim.opt
 
-opt.timeoutlen = 300
+opt.timeoutlen = 400
 opt.tabstop = 2 -- Set the behavior of tab
 opt.expandtab = true --tab insert space
 opt.compatible = false
