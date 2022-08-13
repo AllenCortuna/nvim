@@ -183,7 +183,8 @@ return require("packer").startup(function()
 		keys = { "gc" },
 		event = { "BufRead", "BufNewFile" },
 		config = function()
-			require("Comment").setup()
+      require("plug.comment")
+			-- require("Comment").setup()
 		end,
 	})
 
