@@ -6,17 +6,6 @@ return require("packer").startup(function()
 
 	-- theme
 	use({
-		"mhartington/oceanic-next",
-		opt = true,
-	})
-	use({
-		"ghifarit53/tokyonight-vim",
-		opt = true,
-		config = function()
-			require("theme.tokyonight")
-		end,
-	})
-	use({
 		"marko-cerovac/material.nvim",
 		config = function()
 			require("theme.material")
