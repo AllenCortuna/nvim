@@ -1,3 +1,4 @@
+
 # NVIM CONFIG
 Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 
@@ -35,11 +36,14 @@ bin/install --offline
 
 ##### Code Formater
 ```sh 
-npm i -g prettier
+npm i -g prettier surge
 ```
 
 #### Install Neovim
 **NOTE:** must be on the .config dir
+```sh 
+cd && cd .config/
+```
 ```sh 
 git clone https://github.com/AllenCortuna/nvim
 ```

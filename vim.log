@@ -4,59 +4,58 @@ times in msec
  clock   self+sourced   self:  sourced script
  clock   elapsed:              other lines
 
-000.023  000.023: --- NVIM STARTING ---
-001.098  001.075: locale set
-002.824  001.726: inits 1
-002.895  000.071: window checked
-002.914  000.018: parsing arguments
-025.377  022.463: init lua interpreter
-026.261  000.884: expanding arguments
-026.424  000.163: inits 2
-029.077  002.653: init highlight
-029.094  000.017: waiting for UI
-035.038  005.945: done waiting for UI
-035.084  000.046: init screen for UI
-035.218  000.134: init default mappings
-035.416  000.198: init default autocommands
-041.713  000.385  000.385: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/ftplugin.vim
-042.588  000.271  000.271: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/indent.vim
-043.026  000.228  000.228: sourcing $VIM/sysinit.vim
-085.850  042.672  042.672: sourcing /data/data/com.termux/files/home/.config/nvim/init.lua
-085.912  006.941: sourcing vimrc file(s)
-093.881  002.114  002.114: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.lua
-094.206  000.127  000.127: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.vim
-095.826  000.698  000.698: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/synload.vim
-096.449  002.085  001.387: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/syntax.vim
-108.770  005.768  005.768: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/fzf.vim
-109.040  000.103  000.103: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/gzip.vim
-109.219  000.075  000.075: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/health.vim
-109.537  000.218  000.218: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/man.vim
-109.787  000.147  000.147: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchit.vim
-111.459  001.566  001.566: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchparen.vim
-111.791  000.164  000.164: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/netrwPlugin.vim
-113.061  000.091  000.091: sourcing /data/data/com.termux/files/home/.local/share/nvim/rplugin.vim
-113.125  001.226  001.135: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/rplugin.vim
-113.755  000.526  000.526: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/shada.vim
-114.037  000.104  000.104: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/spellfile.vim
-114.351  000.160  000.160: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tarPlugin.vim
-114.590  000.095  000.095: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tohtml.vim
-114.855  000.143  000.143: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tutor.vim
-115.132  000.154  000.154: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/zipPlugin.vim
-137.945  010.843  010.843: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/material.nvim/colors/material.vim
-139.219  023.470  012.626: sourcing /data/data/com.termux/files/home/.config/nvim/plugin/packer_compiled.lua
-141.875  017.718: loading rtp plugins
-144.745  000.249  000.249: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
-145.972  000.072  000.072: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/which-key.nvim/plugin/which-key.vim
-147.806  005.611: loading packages
-147.822  000.016: loading after plugins
-147.909  000.088: inits 3
-150.802  002.893: reading ShaDa
-150.981  000.179: opening buffers
-150.994  000.013: BufEnter autocommands
-151.010  000.017: editing files in windows
-196.064  045.053: VimEnter autocommands
-196.091  000.027: UIEnter autocommands
-199.301  002.423  002.423: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/autoload/provider/clipboard.vim
-199.364  000.849: before starting main loop
-201.219  001.856: first screen update
-201.240  000.020: --- NVIM STARTED ---
+000.033  000.033: --- NVIM STARTING ---
+000.728  000.695: locale set
+001.613  000.884: inits 1
+001.665  000.053: window checked
+001.673  000.007: parsing arguments
+011.954  010.282: init lua interpreter
+012.445  000.491: expanding arguments
+012.630  000.185: inits 2
+013.650  001.020: init highlight
+013.656  000.006: waiting for UI
+015.769  002.113: done waiting for UI
+015.808  000.040: init screen for UI
+015.870  000.062: init default mappings
+016.027  000.157: init default autocommands
+018.421  000.188  000.188: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/ftplugin.vim
+018.766  000.096  000.096: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/indent.vim
+018.977  000.102  000.102: sourcing $VIM/sysinit.vim
+049.112  030.065  030.065: sourcing /data/data/com.termux/files/home/.config/nvim/init.lua
+049.158  002.680: sourcing vimrc file(s)
+052.225  000.763  000.763: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.lua
+052.367  000.056  000.056: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.vim
+053.059  000.294  000.294: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/synload.vim
+053.301  000.854  000.559: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/syntax.vim
+055.839  000.047  000.047: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/gzip.vim
+055.922  000.032  000.032: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/health.vim
+056.079  000.106  000.106: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/man.vim
+056.166  000.038  000.038: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchit.vim
+056.677  000.463  000.463: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchparen.vim
+056.786  000.055  000.055: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/netrwPlugin.vim
+057.259  000.033  000.033: sourcing /data/data/com.termux/files/home/.local/share/nvim/rplugin.vim
+057.282  000.449  000.415: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/rplugin.vim
+057.528  000.198  000.198: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/shada.vim
+057.635  000.036  000.036: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/spellfile.vim
+057.745  000.053  000.053: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tarPlugin.vim
+057.839  000.038  000.038: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tohtml.vim
+057.949  000.055  000.055: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tutor.vim
+058.057  000.054  000.054: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/zipPlugin.vim
+067.696  004.482  004.482: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/material.nvim/colors/material.vim
+068.740  010.368  005.885: sourcing /data/data/com.termux/files/home/.config/nvim/plugin/packer_compiled.lua
+069.795  006.974: loading rtp plugins
+071.050  000.105  000.105: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/plenary.nvim/plugin/plenary.vim
+071.574  000.035  000.035: sourcing /data/data/com.termux/files/home/.local/share/nvim/site/pack/packer/start/which-key.nvim/plugin/which-key.vim
+072.188  002.253: loading packages
+072.198  000.009: loading after plugins
+072.244  000.046: inits 3
+075.351  003.108: reading ShaDa
+075.652  000.301: opening buffers
+075.659  000.007: BufEnter autocommands
+075.666  000.007: editing files in windows
+096.160  020.494: VimEnter autocommands
+096.182  000.022: UIEnter autocommands
+097.504  000.933  000.933: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/autoload/provider/clipboard.vim
+097.570  000.455: before starting main loop
+098.484  000.914: first screen update
+098.497  000.012: --- NVIM STARTED ---
