@@ -4,6 +4,19 @@ return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("lewis6991/impatient.nvim")
 
+
+  use({
+	  "neovim/nvim-lspconfig",
+	  config = function()
+		  require("plug.lsp-config")
+	  end,
+  })
+  use({
+	  "williamboman/nvim-lsp-installer",
+	  config = function()
+		  require("plug.lsp-installer")
+	  end,
+  })
 	-- theme
 	use({
 		"marko-cerovac/material.nvim",

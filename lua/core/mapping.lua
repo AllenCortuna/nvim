@@ -30,5 +30,4 @@ nmap("n", "<c-j>", "<c-d>", log)
 nmap("n", "dk", "d'k", log)
 nmap("n", "yk", "y'k", log)
 
-local opt = { expr = true, remap = true, replace_keycodes = false }
-
+nmap("n", "<F5>", "<cmd>Neotree toggle<cr>", log)

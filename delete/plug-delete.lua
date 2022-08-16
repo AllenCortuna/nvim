@@ -4,6 +4,7 @@ use({ "ianks/vim-tsx", ft = { "javascript" } })
 use({ "mxw/vim-jsx", ft = { "javascript" } })
 use({ "pangloss/vim-javascript", ft = { "javascript" } })
 
+
 use({
 	"neovim/nvim-lspconfig",
 	config = function()
