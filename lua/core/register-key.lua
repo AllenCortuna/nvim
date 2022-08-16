@@ -66,9 +66,9 @@ wk.register({
 	l = {
 		name = "  Lsp",
 		i = { "<cmd>LspInfo<cr>", "  LspInfo" },
-		I = { "<cmd>LspInstallInfo<cr>", "  LspInstallInfo" },
-		f = { "", "  Diagnostic" },
-    q = {"", "  Lsp Location "},
+		l = { "<cmd>LspInstallInfo<cr>", "  LspInstallInfo" },
+		f = {  "  Diagnostic" },
+    q = { "  Lsp Location "},
 	},
 }, { prefix = "<leader>" })
 

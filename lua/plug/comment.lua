@@ -1,5 +1,4 @@
-require('Comment').setup(
-{
+require('Comment').setup({
     ---Add a space b/w comment and the line
     ---@type boolean|fun():boolean
     padding = true,
@@ -21,7 +20,7 @@ require('Comment').setup(
         ---Line-comment toggle keymap
         line = 'gcc',
         ---Block-comment toggle keymap
-        block = 'gcc',
+        block = 'gbc',
     },
 
     ---LHS of operator-pending mappings in NORMAL mode
