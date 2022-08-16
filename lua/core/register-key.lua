@@ -11,6 +11,7 @@ wk.register({
 	q = { "<cmd>q<cr>", "  Quit" },
 	h = { "<cmd>noh<cr>", "  Highlight" },
 	n = { "<cmd>Notifications<cr>", "  Notify" },
+  ["/"] = { function() require("Comment.api").toggle.linewise.current() end, " Comment"},
 
 	b = { name = "  Buffers" },
 	-- PACKER

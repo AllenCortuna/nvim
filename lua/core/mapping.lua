@@ -29,4 +29,6 @@ nmap("n", "<c-k>", "<c-u>", log)
 nmap("n", "<c-j>", "<c-d>", log)
 nmap("n", "dk", "d'k", log)
 nmap("n", "yk", "y'k", log)
-nmap("n", "<leader>/", "gcc", remap)
+
+local opt = { expr = true, remap = true, replace_keycodes = false }
+
