@@ -1,5 +1,4 @@
 require('Comment').setup(
-
 {
     ---Add a space b/w comment and the line
     ---@type boolean|fun():boolean
@@ -20,9 +19,9 @@ require('Comment').setup(
     ---@type table
     toggler = {
         ---Line-comment toggle keymap
-        line = '<leader>/',
+        line = 'gcc',
         ---Block-comment toggle keymap
-        block = '<leader>/',
+        block = 'gcc',
     },
 
     ---LHS of operator-pending mappings in NORMAL mode

@@ -65,3 +65,13 @@ use({
 			require("zen-mode").setup({})
 		end,
 	})
+
+
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    config = function()
+      require("plug.lspsaga")
+    end,
+  })
+

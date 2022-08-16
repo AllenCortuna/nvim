@@ -140,9 +140,6 @@ require'cmp'.setup.cmdline(':', {
   -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
     -- capabilities = capabilities
   -- }
-  -- require('lspconfig')['tailwindcss'].setup {
-  --   capabilities = capabilities
-  -- }
-  -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
-    -- capabilities = capabilities
-  -- }
+  require('lspconfig')['eslint'].setup {
+    capabilities = capabilities
+  }

@@ -46,20 +46,13 @@ wk.register({
     t = {"<cmd>TODOQuickfixList<cr>", "  TODOQuickfixList"}
 	},
 
-	-- COC
-	-- c = {
-	--   name = "  Coc",
-	--   a = {"<cmd>CocEnable <cr>", "  CocEnable"},
-	--   o = {"<cmd>CocDisable <cr>", "  CocDisable"},
-	-- },
-
 	-- SESSIONMANAGER
 	m = {
 		name = "  Session",
 		l = { "<cmd>SessionManager load_session<cr>", "  Load session" },
 		r = { "<cmd>SessionManager load_last_session<cr>", "  Recent session" },
 		c = { "<cmd>SessionManager load_current_dir_session<cr>", "  Directory session" },
-		k = { "<cmd>SessionManager save_current_session<cr>", "  Save" },
+		s = { "<cmd>SessionManager save_current_session<cr>", "  Save" },
 		d = { "<cmd>SessionManager delete_session<cr>", "  Delete session" },
 	},
 
@@ -69,10 +62,13 @@ wk.register({
 		n = { "<cmd>Gitsigns toggle_numhl<cr>", "  Number highlight" },
 	},
 
+  -- lsp
 	l = {
-		name = "  Lsp",
+		name = "  Lsp",
 		i = { "<cmd>LspInfo<cr>", "  LspInfo" },
-		I = { "<cmd>LspInstallInfo<cr>", "  LspInstallInfo" },
+		I = { "<cmd>LspInstallInfo<cr>", "  LspInstallInfo" },
+		f = { "", "  Diagnostic" },
+    q = {"", "  Lsp Location "},
 	},
 }, { prefix = "<leader>" })
 
