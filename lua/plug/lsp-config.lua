@@ -41,7 +41,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 local lsp_flags = {
   debounce_text_changes = 150,
 }
-require('lspconfig')['eslint'].setup{
+require('lspconfig')['tsserver'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
 }

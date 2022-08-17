@@ -47,7 +47,7 @@ opt.termguicolors = true
 
 -- opt.signcolumn = "number"
 opt.signcolumn = "yes"
-opt.pumheight = 14 -- Height of the pop up menu
+opt.pumheight = 15 -- Height of the pop up menu
 opt.clipboard = "unnamedplus" --Connection to the system clipboard
 opt.preserveindent = true -- Preserve indent structure as much as possible
 opt.lazyredraw = true -- lazily redraw screen

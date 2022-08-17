@@ -19,6 +19,17 @@ return require("packer").startup(function()
 		  require("plug.lsp-installer")
 	  end,
   })
+
+	--todo
+	use({
+		"AmeerTaweel/todo.nvim",
+		requires = "nvim-lua/plenary.nvim",
+		event = { "BufRead", "BufNewFile" },
+		config = function()
+			require("plug.todo")
+		end,
+	})
+
 	-- theme
 	use({
 		"marko-cerovac/material.nvim",
@@ -113,7 +124,7 @@ return require("packer").startup(function()
 	use({
 		"lewis6991/gitsigns.nvim",
 		event = { "BufRead", "BufNewFile" },
-		-- cmd = "Gitsigns",
+		cmd = "Gitsigns",
 		config = function()
 			require("plug.gitsign")
 		end,
@@ -146,6 +157,21 @@ return require("packer").startup(function()
 		end,
 	})
 
+	-- neotree
+	use({
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		cmd = "Neotree",
+		requires = {
+			"kyazdani42/nvim-web-devicons",
+			"nvim-lua/plenary.nvim",
+			"MunifTanjim/nui.nvim",
+		},
+		config = function()
+			require("plug.neotree")
+		end,
+	})
+
 	-- telescope
 	use({
 		"benfowler/telescope-luasnip.nvim",
@@ -166,20 +192,6 @@ return require("packer").startup(function()
 		end,
 	})
 
-	-- neotree
-	use({
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v2.x",
-		cmd = "Neotree",
-		requires = {
-			"kyazdani42/nvim-web-devicons",
-			"nvim-lua/plenary.nvim",
-			"MunifTanjim/nui.nvim",
-		},
-		config = function()
-			require("plug.neotree")
-		end,
-	})
 
 	-- comment
 	use({
@@ -187,8 +199,8 @@ return require("packer").startup(function()
 		keys = { "gc" },
 		event = { "BufRead", "BufNewFile" },
 		config = function()
-      require("plug.comment")
-			-- require("Comment").setup()
+      -- require("plug.comment")
+			require("Comment").setup()
 		end,
 	})
 
