@@ -7,12 +7,14 @@ return require("packer").startup(function()
 
   use({
 	  "neovim/nvim-lspconfig",
+		event = { "BufRead", "BufNewFile" },
 	  config = function()
 		  require("plug.lsp-config")
 	  end,
   })
   use({
 	  "williamboman/nvim-lsp-installer",
+		event = { "BufRead", "BufNewFile" },
 	  config = function()
 		  require("plug.lsp-installer")
 	  end,
