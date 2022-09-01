@@ -140,6 +140,3 @@ require'cmp'.setup.cmdline(':', {
   -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
     -- capabilities = capabilities
   -- }
-  require('lspconfig')['tsserver'].setup {
-    capabilities = capabilities
-  }
