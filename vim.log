@@ -23,10 +23,9 @@ times in msec
 020.823  000.103  000.103: sourcing $VIM/sysinit.vim
 075.390  054.489  054.489: sourcing /data/data/com.termux/files/home/.config/nvim/init.lua
 075.462  002.743: sourcing vimrc file(s)
-079.109  001.129  001.129: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.lua
-079.356  000.098  000.098: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.vim
-080.199  000.390  000.390: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/synload.vim
-080.517  001.062  000.672: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/syntax.vim
+079.109  0
+01.129  001.129: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.lua 079.356  000.098  000.098: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.vim
+080.517  001.062  000.672: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/synta/syntax.vim
 083.667  000.139  000.139: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/gzip.vim
 083.831  000.062  000.062: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/health.vim
 084.062  000.165  000.165: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/man.vim

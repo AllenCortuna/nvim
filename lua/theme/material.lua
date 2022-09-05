@@ -44,6 +44,7 @@ require("material").setup({
 	custom_highlights = {}, -- Overwrite highlights with your own
 
 	plugins = { -- Here, you can disable(set to false) plugins that you don't use or don't want to apply the theme to
+    neotree = false,
 		trouble = true,
 		nvim_cmp = true,
 		neogit = true,
