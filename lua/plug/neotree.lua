@@ -19,7 +19,7 @@ require("neo-tree").setup({
           },
           indent = {
             indent_size = 2.5,
-            padding = 5, -- extra padding on left hand side
+            padding = 2, -- extra padding on left hand side
             -- indent guides
             with_markers = true,
             indent_marker = "│",
@@ -67,7 +67,7 @@ require("neo-tree").setup({
         },
         window = {
           position = "left",
-          width =45,
+          width =35,
           mapping_options = {
             noremap = true,
             nowait = true,

@@ -37,15 +37,6 @@ use({
 	end,
 })
 
--- notify
-use({
-	"rcarriga/nvim-notify",
-	event = "VimEnter",
-	config = function()
-		require("plug.notify")
-	end,
-})
-
 
 	--todo
 	use({

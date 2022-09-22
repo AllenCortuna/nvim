@@ -1,24 +1,44 @@
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function()
+
 	use("wbthomason/packer.nvim")
+
 	use("lewis6991/impatient.nvim")
 
+	-- LSP
+	use({
+		"williamboman/mason.nvim",
+		event = { "BufRead", "BufNewFile" },
+		config = function()
+			require("plug.mason")
+		end,
+	})
 
-  use({
-	  "neovim/nvim-lspconfig",
+	use({
+		"williamboman/mason-lspconfig.nvim",
 		event = { "BufRead", "BufNewFile" },
-	  config = function()
-		  require("plug.lsp-config")
-	  end,
-  })
-  use({
-	  "williamboman/nvim-lsp-installer",
+		config = function()
+			require("mason-lspconfig").setup()
+		end,
+	})
+
+	use({
+		"neovim/nvim-lspconfig",
 		event = { "BufRead", "BufNewFile" },
-	  config = function()
-		  require("plug.lsp-installer")
-	  end,
-  })
+		config = function()
+			require("plug.lsp-config")
+		end,
+	})
+
+	-- formater
+	-- use({
+	-- 	"jose-elias-alvarez/null-ls.nvim",
+	-- 	event = { "BufRead", "BufNewFile" },
+	--    config = function()
+	--      require("plug.null_ls")
+	--    end
+	-- })
 
 	--todo
 	use({
@@ -50,7 +70,7 @@ return require("packer").startup(function()
 	-- session
 	use({
 		"Shatur/neovim-session-manager",
-    cmd = "SessionManager",
+		cmd = "SessionManager",
 		config = function()
 			require("plug.session")
 		end,
@@ -76,7 +96,7 @@ return require("packer").startup(function()
 	-- syntax high
 	use({
 		"nvim-treesitter/nvim-treesitter",
-		run = "TSUpdate",
+		run = ":TSUpdate",
 		event = { "BufRead", "BufNewFile" },
 		cmd = {
 			"TSInstall",
@@ -192,14 +212,13 @@ return require("packer").startup(function()
 		end,
 	})
 
-
 	-- comment
 	use({
 		"numToStr/Comment.nvim",
 		keys = { "gc" },
 		event = { "BufRead", "BufNewFile" },
 		config = function()
-      -- require("plug.comment")
+			-- require("plug.comment")
 			require("Comment").setup()
 		end,
 	})
@@ -240,4 +259,13 @@ return require("packer").startup(function()
 	-- formatter
 	use({ "prettier/vim-prettier", cmd = "Prettier" })
 	use({ "ckipp01/stylua-nvim" })
+
+	-- notify
+	use({
+		"rcarriga/nvim-notify",
+		event = "VimEnter",
+		config = function()
+			require("plug.notify")
+		end,
+	})
 end)

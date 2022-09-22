@@ -7,15 +7,24 @@ wk.register({
 	["<leader>"] = { "<cmd>w!<cr>", "  Save" },
 	-- t = { "<cmd>Telescope find_files<cr>", "  Find files" },
 	a = { "<cmd>Neotree toggle <cr>", "  Neotree" },
-	r = { ":%s///gc<left><left><left>", "  Rename" },
+	r = {
+		name = "  Rename",
+		c = { ":%s///gc<left><left><left>", "  Confirm first" },
+		a = { ":%s///g<left><left>", "  Rename all" },
+	},
 	q = { "<cmd>q<cr>", "  Quit" },
 	h = { "<cmd>noh<cr>", "  Highlight" },
 	n = { "<cmd>Notifications<cr>", "  Notify" },
-  ["/"] = { function() require("Comment.api").toggle.linewise.current() end, " Comment"},
-
+  -- toggle comment
+	["/"] = {
+		function()
+			require("Comment.api").toggle.linewise.current()
+		end,
+		" Comment",
+	},
 
 	b = { name = "  Buffers" },
-	-- PACKER
+	--WARN:  PACKER
 	p = {
 		name = "  Packer", -- optional group name
 		s = { "<cmd>PackerSync<cr>", "  PackeSync" },
@@ -25,7 +34,7 @@ wk.register({
 		S = { "<cmd>PackerStatus<cr>", "  PackerStatus" },
 	},
 
-	-- FILES
+	-- WARN: FILES
 	f = {
 		name = "  Files",
 		f = { "<cmd>Telescope find_files<cr>", "  Find files" },
@@ -35,7 +44,7 @@ wk.register({
 		t = { "<cmd>TODOTelescope<cr>", "  TODOTelescope" },
 	},
 
-	-- SEARCH
+	-- WARN: SEARCH
 	s = {
 		name = "  Search",
 		w = { "<cmd>Telescope live_grep<cr>", "  Word" },
@@ -43,12 +52,12 @@ wk.register({
 		r = { "<cmd>Telescope registers<cr>", "  Registers" },
 		k = { "<cmd>WhichKey<cr>", "  Keymap" },
 		c = { "<cmd>Telescope colorscheme<cr>", "  Colorscheme" },
-    l = {"<cmd> Telescope luasnip <cr>" , "  Snippet"},
-    t = {"<cmd>TODOQuickfixList<cr>", "  TODOQuickfixList"}
+		l = { "<cmd> Telescope luasnip <cr>", "  Snippet" },
+		t = { "<cmd>TODOQuickfixList<cr>", "  TODOQuickfixList" },
 	},
 
-	-- SESSIONMANAGER
-	m = {
+	-- WARN: SESSIONMANAGER
+	S = {
 		name = "  Session",
 		l = { "<cmd>SessionManager load_session<cr>", "  Load session" },
 		r = { "<cmd>SessionManager load_last_session<cr>", "  Recent session" },
@@ -63,13 +72,13 @@ wk.register({
 		n = { "<cmd>Gitsigns toggle_numhl<cr>", "  Number highlight" },
 	},
 
-  -- lsp
+	-- WARN: lsp
 	l = {
 		name = "  Lsp",
 		i = { "<cmd>LspInfo<cr>", "  LspInfo" },
-		l = { "<cmd>LspInstallInfo<cr>", "  LspInstallInfo" },
-		f = {  "  Diagnostic" },
-    q = { "  Lsp Location "},
+		l = { "<cmd>Mason<cr>", "  LspInstallInfo" },
+		f = { "  Diagnostic" },
+		q = { "  Lsp Location " },
 	},
 }, { prefix = "<leader>" })
 
@@ -77,7 +86,7 @@ wk.register({
 	w = { "<cmd>set wrap!<cr>", "  Wrap" },
 	n = { "<cmd>set number!<cr>", "  Number" },
 	o = { "<cmd>on<cr>", "  Window" },
-	z = { "<cmd>ZenMode<cr>", "  ZenMode" },
+	-- z = { "<cmd>ZenMode<cr>", "  ZenMode" },
 	-- t = {"<cmd>TwilightEnable<cr>", "  TwilightEnable"}
 }, { prefix = "s" })
 
@@ -90,4 +99,4 @@ wk.register({
 		"  Format Lua",
 	},
 	j = { "<cmd>Prettier <cr>", "  Format Js/Css/Html" },
-}, { prefix = 'f'})
+}, { prefix = "f" })

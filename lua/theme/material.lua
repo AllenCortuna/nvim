@@ -2,11 +2,11 @@ require("material").setup({
 
 	contrast = {
 		sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-		floating_windows = false, -- Enable contrast for floating windows
-		line_numbers = false, -- Enable contrast background for line numbers
-		sign_column = false, -- Enable contrast background for the sign column
+		floating_windows = true, -- Enable contrast for floating windows
+		line_numbers = true, -- Enable contrast background for line numbers
+		sign_column = true,-- Enable contrast background for the sign column
 		cursor_line = false, -- Enable darker background for the cursor line
-		non_current_windows = false, -- Enable darker background for non-current windows
+		non_current_windows = true, -- Enable darker background for non-current windows
 		popup_menu = true, -- Enable lighter background for the popup menu
 	},
 
@@ -26,7 +26,7 @@ require("material").setup({
 
 	high_visibility = {
 		lighter = false, -- Enable higher contrast text for lighter style
-		darker = false, -- Enable higher contrast text for darker style
+		darker = true, -- Enable higher contrast text for darker style
 	},
 
 	disable = {
@@ -44,7 +44,6 @@ require("material").setup({
 	custom_highlights = {}, -- Overwrite highlights with your own
 
 	plugins = { -- Here, you can disable(set to false) plugins that you don't use or don't want to apply the theme to
-    neotree = false,
 		trouble = true,
 		nvim_cmp = true,
 		neogit = true,
@@ -62,6 +61,8 @@ require("material").setup({
 		indent_blankline = true,
 		nvim_illuminate = true,
 		mini = true,
+		["neotree"] = false,
+		["todo"] = false,
 	},
 })
 
