@@ -1,41 +1,50 @@
-
-
+local cmd = vim.api.nvim_create_autocmd
+local augroup = vim.api.nvim_create_augroup
+local create_command = vim.api.nvim_create_user_command
 
 vim.cmd([[
-
-autocmd ExitPre * :write
-
-"plugin
 augroup packer_user_config
   autocmd!
   autocmd BufWritePost plugin.lua source <afile> | PackerCompile
 augroup end
-
-
-" augroup filetype_vim
-"     autocmd!
-"     autocmd FileType vim setlocal foldmethod=marker
-" augroup END
-"
-" Use K to show documentation in preview window.
-
-" function! s:show_documentation()
-"   if (index(['lua','help'], &filetype) >= 0)
-"     execute 'h '.expand('<cword>')
-"   elseif (coc#rpc#ready())
-"     call CocActionAsync('doHover')
-"   else
-"     execute '!' . &keywordprg . " " . expand('<cword>')
-"   endif
-" endfunction
-
-
-
-
-" autocmd BufNewFile * :write
-" autocmd BufNewFile,BufRead * :colorscheme material
-
 ]])
+
+-- autocmd ExitPre * :write
 --autocmd BufRead * :set scl=yes
--- autocmd InsertLeave * :write
 -- autocmd BufNewFile * :write
+-- autocmd InsertLeave * :write
+--save on exit
+augroup("save_exit", { clear = true })
+cmd("ExitPre", {
+	desc = "Save on Exit",
+	group = "save_exit",
+	pattern = "*",
+	command = "wall!",
+})
+
+augroup("neotree_start", { clear = true })
+cmd("BufEnter", {
+	desc = "Open Neo-Tree on startup with directory",
+	group = "neotree_start",
+	callback = function()
+		local stats = vim.loop.fs_stat(vim.api.nvim_buf_get_name(0))
+		if stats and stats.type == "directory" then
+			require("neo-tree.setup.netrw").hijack()
+		end
+	end,
+})
+-- source packer
+augroup("packer_conf", { clear = true })
+cmd("BufWritePost", {
+	desc = "Sync packer after modifying plugins.lua",
+	group = "packer_conf",
+	pattern = "plugins.lua",
+	command = "source <afile> | PackerSync",
+})
+vim.api.nvim_create_augroup("packer_conf", { clear = true })
+vim.api.nvim_create_autocmd("BufWritePost", {
+	desc = "Sync packer after modifying plugins.lua",
+	group = "packer_conf",
+	pattern = "plugins.lua",
+	command = "source <afile> | PackerSync",
+})

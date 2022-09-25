@@ -1,7 +1,7 @@
 -- Set barbar's options
 require'bufferline'.setup {
   -- Enable/disable animations
-  animation = false,
+  animation = true,
 
   -- Enable/disable auto-hiding the tab bar when there is a single buffer
   auto_hide = false,

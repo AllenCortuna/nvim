@@ -10,11 +10,11 @@ Nvim configuration using cmp completion for **Web Develelopment** on **Termux**
 - git
 - packer
 
-**NOTE:** neovim version must be >= 0.7 
+**INFO:** neovim version must be >= 0.7 
 
 #### Installation
 ##### Termux pkg
-**NOTE:** if your dont have the require package paste this
+**INFO:** if your dont have the require package paste this
 ```sh
 apt update && apt upgrade
 ```
@@ -40,7 +40,7 @@ npm i -g prettier surge
 ```
 
 #### Install Neovim
-**NOTE:** must be on the .config dir
+**INFO:** must be on the .config dir
 ```sh 
 cd && cd .config/
 ```

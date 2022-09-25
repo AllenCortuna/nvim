@@ -4,7 +4,7 @@ if impatient_ok then
 end
 
 for _, source in ipairs({
-	"core.require",
+	"core.bottrap",
 	"core.option",
 	"core.plugin",
 	"core.mapping",

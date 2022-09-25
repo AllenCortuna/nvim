@@ -3,8 +3,8 @@ require("material").setup({
 	contrast = {
 		sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
 		floating_windows = true, -- Enable contrast for floating windows
-		line_numbers = true, -- Enable contrast background for line numbers
-		sign_column = true,-- Enable contrast background for the sign column
+		line_numbers = false, -- Enable contrast background for line numbers
+		sign_column = false,-- Enable contrast background for the sign column
 		cursor_line = false, -- Enable darker background for the cursor line
 		non_current_windows = true, -- Enable darker background for non-current windows
 		popup_menu = true, -- Enable lighter background for the popup menu
@@ -22,10 +22,11 @@ require("material").setup({
 		"terminal", -- Darker terminal background
 		"packer", -- Darker packer background
 		"qf", -- Darker qf list background
+    "neotree",
 	},
 
 	high_visibility = {
-		lighter = false, -- Enable higher contrast text for lighter style
+		lighter = true, -- Enable higher contrast text for lighter style
 		darker = true, -- Enable higher contrast text for darker style
 	},
 

@@ -71,3 +71,24 @@ use({
   use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
     require("toggleterm").setup()
   end}
+
+
+	use({
+		"folke/twilight.nvim",
+		config = function()
+			require("plug.twilight")
+		end,
+	})
+
+
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+		config = function()
+			require("conf.fzf")
+		end,
+	})
+
+
+
+
