@@ -31,14 +31,6 @@ return require("packer").startup({
 			end,
 		})
 
-		--ui
-		use({
-			"stevearc/dressing.nvim",
-			config = function()
-				require("conf.dressing")
-			end,
-		})
-
 		use({
 			"williamboman/mason-lspconfig.nvim",
 			event = { "BufRead", "BufNewFile" },
@@ -59,6 +51,14 @@ return require("packer").startup({
 			"onsails/lspkind.nvim",
 			config = function()
 				require("conf.lspkind")
+			end,
+		})
+
+		--ui
+		use({
+			"stevearc/dressing.nvim",
+			config = function()
+				require("conf.dressing")
 			end,
 		})
 		-- formater

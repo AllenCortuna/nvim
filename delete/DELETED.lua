@@ -4,7 +4,6 @@ use({ "ianks/vim-tsx", ft = { "javascript" } })
 use({ "mxw/vim-jsx", ft = { "javascript" } })
 use({ "pangloss/vim-javascript", ft = { "javascript" } })
 
-
 use({
 	"neovim/nvim-lspconfig",
 	config = function()
@@ -37,58 +36,61 @@ use({
 	end,
 })
 
+--todo
+use({
+	"AmeerTaweel/todo.nvim",
+	requires = "nvim-lua/plenary.nvim",
+	event = { "BufRead", "BufNewFile" },
+	config = function()
+		require("plug.todo")
+	end,
+})
 
-	--todo
-	use({
-		"AmeerTaweel/todo.nvim",
-		requires = "nvim-lua/plenary.nvim",
-		event = { "BufRead", "BufNewFile" },
-		config = function()
-			require("plug.todo")
-		end,
-	})
+-- zenmode
+use({
+	"folke/zen-mode.nvim",
+	cmd = "ZenMode",
+	config = function()
+		require("zen-mode").setup({})
+	end,
+})
 
-	-- zenmode
-	use({
-		"folke/zen-mode.nvim",
-		cmd = "ZenMode",
-		config = function()
-			require("zen-mode").setup({})
-		end,
-	})
+use({
+	"glepnir/lspsaga.nvim",
+	branch = "main",
+	config = function()
+		require("plug.lspsaga")
+	end,
+})
 
+-- term
+use({
+	"akinsho/toggleterm.nvim",
+	tag = "v2.*",
+	config = function()
+		require("toggleterm").setup()
+	end,
+})
 
-  use({
-    "glepnir/lspsaga.nvim",
-    branch = "main",
-    config = function()
-      require("plug.lspsaga")
-    end,
-  })
+use({
+	"folke/twilight.nvim",
+	config = function()
+		require("plug.twilight")
+	end,
+})
 
+use({
+	"nvim-telescope/telescope-fzf-native.nvim",
+	run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+	config = function()
+		require("conf.fzf")
+	end,
+})
 
-  -- term 
-  use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
-    require("toggleterm").setup()
-  end}
-
-
-	use({
-		"folke/twilight.nvim",
-		config = function()
-			require("plug.twilight")
-		end,
-	})
-
-
-	use({
-		"nvim-telescope/telescope-fzf-native.nvim",
-		run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-		config = function()
-			require("conf.fzf")
-		end,
-	})
-
-
-
-
+use({
+	"goolord/alpha-nvim",
+	requires = { "kyazdani42/nvim-web-devicons" },
+	config = function()
+		require("alpha").setup(require("alpha.themes.dashboard").config)
+	end,
+})

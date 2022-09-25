@@ -1,5 +1,4 @@
 for (let index = 0; index < array.length; index++) {
-  const element = array[index];ha
-  hahaha
-  
+  const element = array[index];
+  const name
 }

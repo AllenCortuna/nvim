@@ -8,3 +8,5 @@ require("notify").setup({
 
 require("notify").history()
 vim.notify = require("notify")
+
+--
