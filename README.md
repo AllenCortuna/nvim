@@ -38,6 +38,13 @@ bin/install --offline
 ```sh 
 npm i -g prettier surge
 ```
+
+#### install Astro
+```sh
+git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim  && nvim +PackerSync
+
+```
+
 # OPTIONAL
 #### Install Neovim
 **INFO:** must be on the .config dir
