@@ -23,11 +23,11 @@ require("telescope").setup({
     },
 
 	},
-	pickers = {
-		find_files = {
-			theme = "dropdown", --dropdown cursor ivy
-		},
-	},
+	-- pickers = {
+	-- 	find_files = {
+	-- 		theme = "dropdown", --dropdown cursor ivy
+	-- 	},
+	-- },
 	extensions = {
 	},
 })

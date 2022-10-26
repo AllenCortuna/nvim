@@ -9,6 +9,7 @@ return require("packer").startup({
 		-- colorscheme
 		use({
 			"marko-cerovac/material.nvim",
+			opt = true,
 			config = function()
 				require("theme.material")
 			end,
@@ -16,7 +17,6 @@ return require("packer").startup({
 		use({
 			"rose-pine/neovim",
 			as = "rose-pine",
-			opt = true,
 			config = function()
 				require("conf.rose-pine")
 			end,
@@ -33,9 +33,10 @@ return require("packer").startup({
 
 		use({
 			"williamboman/mason-lspconfig.nvim",
-			event = { "BufRead", "BufNewFile" },
 			config = function()
-				require("mason-lspconfig").setup()
+				require("mason-lspconfig").setup({
+					ensure_installed = { "sumneko_lua"  },
+				})
 			end,
 		})
 
@@ -71,16 +72,6 @@ return require("packer").startup({
 		--    end
 		-- })
 
-		--todo
-		use({
-			"AmeerTaweel/todo.nvim",
-			requires = "nvim-lua/plenary.nvim",
-			event = { "BufRead", "BufNewFile" },
-			config = function()
-				require("conf.todo")
-			end,
-		})
-
 		-- icons
 		use({
 			"kyazdani42/nvim-web-devicons",
@@ -112,7 +103,7 @@ return require("packer").startup({
 			"lukas-reineke/indent-blankline.nvim",
 			event = "BufReadPost",
 			config = function()
-				require("indent_blankline").setup({})
+				require("conf.blankline")
 			end,
 		})
 
@@ -144,14 +135,6 @@ return require("packer").startup({
 				require("conf.galaxyline")
 			end,
 		})
-
-		-- use({
-		-- 	"tamton-aquib/staline.nvim",
-		-- 	after = "nvim-web-devicons",
-		-- 	config = function()
-		-- 		require("conf.staline")
-		-- 	end,
-		-- })
 
 		-- bufferline
 		use({
@@ -237,10 +220,19 @@ return require("packer").startup({
 		use({
 			"benfowler/telescope-luasnip.nvim",
 			module = "telescope._extensions.luasnip",
+			after = "telescope.nvim",
 			config = function()
 				require("telescope").load_extension("luasnip")
 			end,
+		})
+
+		use({
+			"nvim-telescope/telescope-fzf-native.nvim",
+			run = ":make",
 			after = "telescope.nvim",
+			-- config = function()
+			-- 	require("conf.fzf")
+			-- end,
 		})
 
 		-- comment

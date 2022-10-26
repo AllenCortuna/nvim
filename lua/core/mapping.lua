@@ -33,6 +33,7 @@ nmap("n", "dk", "d'k", log)
 -- yank to mark
 nmap("n", "yk", "y'k", log)
 nmap("n", "zk", "v'k", log)
+nmap("n", "gk", "gc'k", log)
 -- visual mode
 nmap("n", "z", "v", log)
 

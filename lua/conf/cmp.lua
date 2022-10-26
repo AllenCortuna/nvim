@@ -49,11 +49,11 @@ format = lspkind.cmp_format({
 			i = cmp.mapping.abort(),
 			c = cmp.mapping.close(),
 		}),
-		["<CR>"] = cmp.mapping.confirm({ select = false }),
+		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.expandable() then
+			-- if cmp.visible() then
+				-- cmp.select_next_item()
+			if luasnip.expandable() then
 				luasnip.expand()
 			elseif luasnip.expand_or_jumpable() then
 				luasnip.expand_or_jump()
@@ -127,6 +127,13 @@ local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protoco
 -- require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
 -- capabilities = capabilities
 -- }
+
 require("lspconfig")["eslint"].setup({
+	capabilities = capabilities,
+})
+require("lspconfig")["tsserver"].setup({
+	capabilities = capabilities,
+})
+require("lspconfig")["sumneko_lua"].setup({
 	capabilities = capabilities,
 })

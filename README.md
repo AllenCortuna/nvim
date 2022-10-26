@@ -38,7 +38,7 @@ bin/install --offline
 ```sh 
 npm i -g prettier surge
 ```
-
+# OPTIONAL
 #### Install Neovim
 **INFO:** must be on the .config dir
 ```sh 

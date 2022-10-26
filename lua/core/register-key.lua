@@ -10,12 +10,13 @@ wk.register({
 	r = {
 		name = "  Rename",
 		c = { ":%s///gc<left><left><left>", "  Confirm first" },
+		c = { ":s///g<left><left>", "  Confirm first" },
 		a = { ":%s///g<left><left>", "  Rename all" },
 	},
 	q = { "<cmd>q<cr>", "  Quit" },
 	h = { "<cmd>noh<cr>", "  Highlight" },
 	n = { "<cmd>Notifications<cr>", "  Notify" },
-  -- toggle comment
+	-- toggle comment
 	["/"] = {
 		function()
 			require("Comment.api").toggle.linewise.current()
@@ -76,10 +77,12 @@ wk.register({
 	l = {
 		name = "  Lsp",
 		i = { "<cmd>LspInfo<cr>", "  LspInfo" },
-		l = { "<cmd>Mason<cr>", "  LspInstallInfo" },
-		f = { "  Diagnostic" },
+		I = { "<cmd>Mason<cr>", "  LspInstallInfo" },
+		d = { "  Diagnostic" },
 		q = { "  Lsp Location " },
 	},
+	n = { "<cmd>SessionManager load_current_dir_session<cr>", "  ./Session" },
+c ={"<cmd>bd<cr>","  Close file"}
 }, { prefix = "<leader>" })
 
 wk.register({
